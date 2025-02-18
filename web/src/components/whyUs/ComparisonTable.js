@@ -23,12 +23,12 @@ function ComparisonTable() {
   return (
     <ComparisonTableStyles>
       <section>
-        {/* <h3>RACOMA STRATEGIES VS. PRIVATE EQUITY VS. COMPETITOR ACQUISITION</h3> */}
+        {/* <h3>ETA FUNDING VS. PRIVATE EQUITY VS. COMPETITOR ACQUISITION</h3> */}
         <table>
           <thead>
             <tr>
               <th></th>
-              <th> RACOMA STRATEGIES</th>
+              <th> ETA FUNDING</th>
               <th>PRIVATE EQUITY</th>
               <th>COMPETITOR</th>
             </tr>

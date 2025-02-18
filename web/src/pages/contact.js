@@ -1,6 +1,6 @@
-import React from 'react';
-import HeroSection from '../components/contact/HeroSection';
-import { SEO } from '../components/SEO';
+import React from "react";
+import HeroSection from "../components/contact/HeroSection";
+import { SEO } from "../components/SEO";
 
 const ContactPage = () => (
   <>
@@ -10,6 +10,4 @@ const ContactPage = () => (
 
 export default ContactPage;
 
-export const Head = () => (
-  <SEO title="Contact | RACOMA STRATEGIES" />
-)
+export const Head = () => <SEO title="Contact | ETA FUNDING" />;

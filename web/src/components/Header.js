@@ -23,13 +23,13 @@ const Header = () => {
         <div className="header__background" />
         <div className="header__logo">
           <Link to="/" onClick={handleNavItemClick}>
-            RACOMA <br />/ Strategies
+            ETA FUNDING <br />/ PARTNERS
             
           </Link>
         </div>
         <div className="header__logoDummy">
           <Link to="/" onClick={handleNavItemClick}>
-            RACOMA <br />/ Strategies
+          ETA FUNDING <br />/ PARTNERS
           </Link>
         </div>
         {/* <div className="header__logo">

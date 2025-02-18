@@ -5,7 +5,7 @@ import ContentSection from "../components/ourProcess/ContentSection";
 
 const OurProcess = () => (
   <>
-    <SEO title="Our Process | RACOMA STRATEGIES" />
+    <SEO title="Our Process | ETA FUNDING" />
     <HeroSection />
     <ContentSection />
   </>
@@ -13,4 +13,4 @@ const OurProcess = () => (
 
 export default OurProcess;
 
-export const Head = () => <SEO title="Our Process | RACOMA STRATEGIES" />;
+export const Head = () => <SEO title="Our Process | ETA FUNDING" />;

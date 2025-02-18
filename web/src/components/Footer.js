@@ -13,7 +13,7 @@ function Footer() {
         <div className="footer__wrapper">
           <div className="footer__logo col">
             <Link to="/">
-              RACOMA <br /> / Strategies
+              ETA <br /> / FUNDING
             </Link>
           </div>
           <div className="footer__contactLinks col">
@@ -33,7 +33,7 @@ function Footer() {
         </div>
 
         <ParagraphText className="copyright">
-          © Racoma Strategies LLC {new Date().getFullYear()}. All rights
+          © ETA FINDING LLC {new Date().getFullYear()}. All rights
           reserved.
         </ParagraphText>
       </section>

@@ -8,9 +8,9 @@ const sanityConfig = require('./sanity-config');
 
 module.exports = {
   siteMetadata: {
-    title: `Racoma Strategies`,
-    siteUrl: `https://racomastrategies.com`,
-    description: `Racoma Strategies is a search fund focused on acquiring, operating, and growing a single high-potential small business.`,
+    title: `ETA Funding`,
+    siteUrl: `https://etafunding.com`,
+    description: `Entrepreneurship Through Acquisition - Funding Partners`,
     image:  '/favicon-32x32.png'
   },
   plugins: [

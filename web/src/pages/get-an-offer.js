@@ -14,4 +14,4 @@ const Quiz = () => (
 
 export default Quiz;
 
-export const Head = () => <SEO title="GET AN OFFER | RACOMA STRATEGIES" />;
+export const Head = () => <SEO title="GET AN OFFER | ETA FUNDING" />;

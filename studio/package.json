@@ -1,10 +1,10 @@
 {
-  "name": "racoma",
+  "name": "eta-funding",
   "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "Shaif Arfan",
+  "author": "cocoelizabeth",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
@@ -13,25 +13,18 @@
   "keywords": [
     "sanity",
     "blog",
-    "racoma strategies"
+    "eta funding"
   ],
   "dependencies": {
-    "@sanity/base": "^2.36.1",
-    "@sanity/code-input": "^2.27.0",
-    "@sanity/core": "^2.36.1",
-    "@sanity/default-layout": "^2.36.1",
-    "@sanity/default-login": "^2.36.1",
-    "@sanity/desk-tool": "^2.36.1",
-    "@sanity/table": "^1.0.1",
-    "@sanity/vision": "^2.36.1",
+    "@sanity/client": "^6.28.0",
+    "@sanity/vision": "^3.76.1",
     "caniuse-lite": "^1.0.30001594",
     "date-fns": "^2.28.0",
     "prop-types": "^15.7",
-    "react": "^17.0",
-    "react-dom": "^17.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-icons": "^4.3.1",
-    "sanity-plugin-dashboard-widget-netlify": "^2.0.1",
-    "sanity-plugin-table": "^2.3.0",
-    "styled-components": "^5.2.0"
+    "sanity": "^3.76.1",
+    "styled-components": "^6.1.15"
   }
 }

@@ -6,7 +6,7 @@ import PhilosophySection from "../components/childCare/PhilosophySection";
 
 const ChildCarePage = () => (
   <>
-    <SEO title="Child Care | RACOMA STRATEGIES" />
+    <SEO title="Child Care | ETA FUNDING" />
 
     <HeroSection />
     <PhilosophySection />
@@ -16,6 +16,4 @@ const ChildCarePage = () => (
 
 export default ChildCarePage;
 
-export const Head = () => (
-  <SEO title="Child Care | RACOMA STRATEGIES" />
-);
+export const Head = () => <SEO title="Child Care | ETA FUNDING" />;

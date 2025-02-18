@@ -15,4 +15,4 @@ const BlogPage = () => (
 
 export default BlogPage;
 
-export const Head = () => <SEO title="Blog | RACOMA STRATEGIES" />;
+export const Head = () => <SEO title="Blog | ETA FUNDING" />;
