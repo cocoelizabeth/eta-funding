@@ -1,0 +1,35 @@
+{
+  "root": true,
+  "api": {
+    "projectId": "jpg1p17m",
+    "dataset": "production"
+  },
+  "project": {
+    "name": "Racoma Strategies"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "@sanity/code-input",
+    "table"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./components/SidebarList"
+    }
+  ]
+}
