@@ -9,6 +9,12 @@ export const ContentSectionStyles = styled.div`
   .contentSection__introText {
     padding-bottom: var(--page-intro-small);
     border-bottom: 1px solid var(--racome-teal);
+    p {
+      margin-bottom: 3rem;
+    }
+    p:last-of-type {
+      margin-bottom: 0;
+    }
   }
 
   .contentSection__grid_row {
@@ -36,6 +42,7 @@ export const ContentSectionStyles = styled.div`
   }
 
   @media only screen and (min-width: 720px) {
+
     .contentSection__grid_row {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -96,6 +103,18 @@ export const ContentSectionStyles = styled.div`
       }
     }
   }
+
+  @media only screen and (min-width: 1280px) {
+    .contentSection__introText {
+    padding-bottom: var(--page-intro-small);
+    border-bottom: 1px solid var(--racome-teal);
+    p {
+      margin-bottom: 6rem;
+    }
+  }
+  }
+    
+  
 `;
 
 // import styled from "styled-components";
