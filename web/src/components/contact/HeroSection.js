@@ -28,7 +28,7 @@ function HeroSection() {
     <HeroSectionStyles>
       <section>
         <div className="hero__wrapper">
-          <div className="headlineText h2">{contact.headerText}</div>
+          <div className="headlineText h2">{contact?.headerText ?? "Default Header"}</div>
           <div className="subheadingText">
             <div className="subheadingText">
               <MyPortableText
@@ -39,8 +39,8 @@ function HeroSection() {
 
             <ul className="contactLinks">
               {socialLinks.map((item) => (
-                <li key={item.name}>
-                  <a href={item.url}>{item.text}</a>
+                <li key={item?.name ?? ""}>
+                  <a href={item?.url ?? ""}>{item?.text ?? ""}</a>
                 </li>
               ))}
             </ul>

@@ -18,7 +18,7 @@ function HeroSection() {
       }
   `);
 
-  const { hero } = data.allSanityOurProcess.nodes[0];
+  const hero = data?.allSanityOurProcess?.nodes[0] ?? {};
 
   return (
     // <HeroSectionStyles>
