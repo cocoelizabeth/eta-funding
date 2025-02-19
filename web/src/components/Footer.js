@@ -5,17 +5,26 @@ import Logo from './Logo';
 import { socialLinks } from '../constants/socialLinks';
 import Button from './buttons/Button';
 import ParagraphText from './typography/ParagraphText'
+import { menu } from '../constants/menu';
 
 function Footer() {
   return (
     <FooterStyles>
       <section>
         <div className="footer__wrapper">
-          <div className="footer__logo col">
-            <Link to="/">
-              ETA <br /> / FUNDING
-            </Link>
+
+          <div className="footer__logo_svg col">
+       <Logo />
           </div>
+
+          {/* <ul className="footer__menuList col">
+          {menu.map((item) => (
+            <li key={item.path}>
+              <Link to={item.path}>{item.title}</Link>
+            </li>
+          ))}
+        </ul> */}
+
           <div className="footer__contactLinks col">
             <ul className="">
               {socialLinks.map((item) => (
@@ -25,6 +34,7 @@ function Footer() {
               ))}
             </ul>
           </div>
+
           {/* <div className="footer__button col">
             <Button to="/" tag={Link} variant="primaryFilled">
               Intermediary Brochure
@@ -40,13 +50,7 @@ function Footer() {
         </ParagraphText>
       </section>
 
-      {/* <ul className="footer__menuList">
-          {menu.map((item) => (
-            <li key={item.path}>
-              <Link to={item.path}>{item.title}</Link>
-            </li>
-          ))}
-        </ul> */}
+
     </FooterStyles>
   );
 }

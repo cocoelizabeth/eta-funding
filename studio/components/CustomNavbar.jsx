@@ -5,7 +5,7 @@ function CustomNavbar(props) {
       <Stack>
         <Card padding={3} tone="caution">
           <Flex justify="center">
-            <Text>Important reminder! Remember this banner!</Text>
+            <Text>Welcome to ETA Funding Sanity!</Text>
           </Flex>
         </Card>
         <>{props.renderDefault(props)}</>
