@@ -57,12 +57,14 @@ export default styled.header`
   .header__logoDummy {
     ${'' /* height: 100%; */}
     position: relative;
+    height: 100%;
   }
 
   .header__logo div a,
   .header__logoDummy div a {
     ${"" /* width: 13.7rem; */}
     height: 1.8rem;
+    width: 13/7rem;
   } 
 
   @media only screen and (min-width: 1280px) {
@@ -94,7 +96,18 @@ export default styled.header`
 
 
 
+.header__logo_svg {
+  line-height: 0;
+  a {
+    height: 4.5rem;
+  }
+}
 
+@media only screen and (min-width: 1280px) {
+    .header__logo_svg  a {
+     height: 5rem;
+    }
+  }
 
   .nav__wrapper {
     ul {

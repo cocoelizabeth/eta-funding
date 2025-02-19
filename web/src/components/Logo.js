@@ -1,14 +1,14 @@
 import React from 'react';
 import LogoStyles from '../styles/LogoStyles';
-// import RacomaLogo from '../../static/racoma-strategies-logo-light.svg';
+import  ETALogo from '../../static/eta-funding-partners-logo-light.svg';
 
 function Logo() {
   return (
-    <div>
+ 
       <LogoStyles to="/">
-        {/* <RacomaLogo /> */}
+        < ETALogo />
       </LogoStyles>
-    </div>
+  
   );
 }
 

@@ -21,20 +21,32 @@ const Header = () => {
     <HeaderStyles>
       <div className="header__wrapper">
         <div className="header__background" />
-        <div className="header__logo">
+        {/* <div className="header__logo">
           <Link to="/" onClick={handleNavItemClick}>
             ETA FUNDING <br />/ PARTNERS
             
           </Link>
+        </div> */}
+        {/* <div className="header__logoDummy">
+          <Link to="/" onClick={handleNavItemClick}>
+            ETA FUNDING <br />/ PARTNERS
+          </Link>
+        </div> */}
+{/* 
+
+        <div className="header__logo">
+          <Logo />
         </div>
         <div className="header__logoDummy">
-          <Link to="/" onClick={handleNavItemClick}>
-          ETA FUNDING <br />/ PARTNERS
-          </Link>
-        </div>
-        {/* <div className="header__logo">
           <Logo />
         </div> */}
+
+
+<div className="header__logo_svg">
+          <Logo />
+        </div>
+
+
         <div className={clsx("nav__wrapper", isNavOpen && "open")}>
           <div className="mobileIcon">
             {/* <Button to="/get-an-offer" tag={Link} className="header__cta">
