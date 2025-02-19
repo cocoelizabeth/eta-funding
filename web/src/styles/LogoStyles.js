@@ -6,5 +6,6 @@ export default styled(Link)`
 
   svg {
     display: block;
+
   }
 `;

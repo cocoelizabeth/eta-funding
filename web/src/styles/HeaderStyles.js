@@ -100,6 +100,9 @@ export default styled.header`
   line-height: 0;
   a {
     height: 4.5rem;
+    svg {
+      max-width: 200px;
+    }
   }
 }
 
