@@ -15,14 +15,14 @@ export const menu = [
     title: 'Who We Are',
     path: '/who-we-are',
   },
-  {
-    title: 'Our Process',
-    path: '/our-process',
-  },
   // {
-  //   title: 'Blog',
-  //   path: '/blog',
+  //   title: 'Our Process',
+  //   path: '/our-process',
   // },
+  {
+    title: 'Blog',
+    path: '/blog',
+  },
   // {
   //   title: 'Contact',
   //   path: '/contact',

@@ -20,7 +20,8 @@ function HeroSection() {
     }
   `);
 
-  const { hero } = data.allSanityHome.nodes[0];
+  const hero = data?.allSanityHome?.nodes?.[0]?.hero ?? {}; // Add fallback to prevent error
+
 
   return (
     <HeroSectionStyles>

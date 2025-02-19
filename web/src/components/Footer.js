@@ -33,7 +33,9 @@ function Footer() {
         </div>
 
         <ParagraphText className="copyright">
-          © ETA FINDING LLC {new Date().getFullYear()}. All rights
+        <p>Disclaimer: All information provided on this site is for informational purposes and does not constitute investment advice. Past performance does not guarantee future returns. Investors should seek advice from authorized advisors and be prepared for potential losses.</p>
+        <br></br>
+          © ETA FUNDING PARRNERS LLC {new Date().getFullYear()}. All rights
           reserved.
         </ParagraphText>
       </section>

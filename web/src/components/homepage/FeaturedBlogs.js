@@ -8,7 +8,7 @@ import BlogList from '../blog/BlogList';
 function FeaturedBlogs() {
   const data = useStaticQuery(graphql`
     {
-      allSanityFeatured(filter: { _id: { eq: "featuredItems" } }) {
+      allSanityFeatured {
         nodes {
           blogs {
             title

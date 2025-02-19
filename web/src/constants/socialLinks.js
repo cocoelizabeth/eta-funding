@@ -10,8 +10,8 @@ export const socialLinks = [
   },
   {
     name: 'Email',
-    url: 'mailto:info@racomastrategies.com',
-    text: 'info@racomastrategies.com',
+    url: 'mailto:info@etafunding.com',
+    text: 'info@etafunding.com',
     icon: <MdEmail />,
   },
   //   {

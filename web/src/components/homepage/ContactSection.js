@@ -22,9 +22,7 @@ function ContactSection() {
     
   `);
   
-  const contact = data.allSanityHome.nodes[0].contact;
- 
-
+  const contact = data?.allSanityHome?.nodes?.[0]?.contact ?? {};
 
 
   return (

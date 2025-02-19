@@ -46,7 +46,7 @@ export default defineType({
     defineField({
       type: 'textBlock',
       name: 'capitalPartners',
-      title: 'Capital Partners',
+      title: 'Partners',
     }),
   ],
 });

@@ -6,4 +6,5 @@
 module.exports = {
   projectId: "mg87ynjf",
   dataset: "production",
+  watchMode: true,
 };

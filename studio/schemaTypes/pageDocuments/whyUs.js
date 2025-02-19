@@ -1,7 +1,7 @@
 import { defineType, defineField } from 'sanity';
 
 export default defineType({
-  title: 'Why Us',
+  title: 'Managed Fund',
   name: 'whyUs',
   type: 'document',
   fields: [
