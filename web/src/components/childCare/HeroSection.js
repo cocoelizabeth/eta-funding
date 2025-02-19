@@ -18,7 +18,7 @@ function HeroSection() {
     }
   `);
 
-  const { hero } = data.allSanityChildCare.nodes[0];
+  const hero  = data?.allSanityChildCare?.nodes[0] ?? {};
 
   return (
     

@@ -35,8 +35,8 @@ function HeroSection() {
     //   </section>
     // </HeroSectionStyles>
     <HeroSectionTemplate
-      heading={hero.headerText}
-      subheading={hero._rawSubText}
+      heading={hero?.headerText ?? "Default Header"}
+      subheading={hero?._rawSubText ?? "Default subtext"}
     />
   );
 }

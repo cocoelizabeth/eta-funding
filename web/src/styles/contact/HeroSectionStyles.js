@@ -82,7 +82,8 @@ export const HeroSectionStyles = styled.div`
       
       padding-top: calc(var(--grid-padding)/2);
       a {
-        text-decoration: underline;
+        text-decoration: var(--link-text-decoration);
+        text-underline-offset: var(--link-underline-offset);
         cursor: pointer;
       }
       a:hover {

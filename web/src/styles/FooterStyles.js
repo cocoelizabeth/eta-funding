@@ -24,7 +24,8 @@ export const FooterStyles = styled.footer`
       text-transform: uppercase;
     }
     .footer__contactLinks {
-      text-decoration: underline;
+      text-decoration: var(--link-text-decoration);
+      text-underline-offset: var(--link-underline-offset);
       ul li a {
         line-height: 2rem;
       }

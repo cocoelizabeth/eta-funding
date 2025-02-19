@@ -6,10 +6,11 @@ export const NotFoundPageStyles = styled.div`
     font-size: 5rem;
   }
   .link {
-    color: var(--primary);
-    text-decoration: none;
+    color: var(--raocom-light);
+      text-decoration: var(--link-text-decoration);
+      text-underline-offset: var(--link-underline-offset);
     :hover {
-      text-decoration: underline;
+      color: var(--racoma-dark);
     }
   }
 `;

@@ -14,7 +14,8 @@ export const SingleBlogStyles = styled.div`
     margin-bottom: var(--page-intro-small);
     font-size: 10px;
     a {
-      text-decoration: underline;
+      text-decoration: var(--link-text-decoration);
+      text-underline-offset: var(--link-underline-offset);
       cursor: pointer;
     }
     .separator {
@@ -70,9 +71,11 @@ export const SingleBlogStyles = styled.div`
     }
     a {
       text-transform: uppercase;
-      text-decoration: underline;
+      text-decoration: var(--link-text-decoration);
+      text-underline-offset: var(--link-underline-offset);
       &:hover {
-        text-decoration: underline;
+        text-decoration: var(--link-text-decoration);
+        text-underline-offset: var(--link-underline-offset);
         color: var(--racoma-navy);
       }
     }
@@ -122,7 +125,8 @@ export const SingleBlogStyles = styled.div`
       padding-left: calc(var(--grid-gutter) * 4);
       padding-top: 0;
       a {
-        text-decoration: underline;
+        text-decoration: var(--link-text-decoration);
+        text-underline-offset: var(--link-underline-offset);
       }
       ul > li:before {
         content: "•";

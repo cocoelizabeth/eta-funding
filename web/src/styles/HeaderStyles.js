@@ -121,8 +121,8 @@ export default styled.header`
         &:hover {
           a {
             ${"" /* border-bottom: 1px solid var(--racoma-light); */}
-            text-decoration: underline;
-            text-underline-offset: .4rem;
+            text-decoration: var(--link-text-decoration);
+            text-underline-offset: var(--link-underline-offset);
           }
         }
         a {
@@ -276,7 +276,7 @@ export default styled.header`
   }
     .activeNavLink {
      text-decoration: underline !important;
-      text-underline-offset: .4rem;
+     text-underline-offset: var(--link-underline-offset);
   }
 
 

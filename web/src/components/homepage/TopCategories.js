@@ -8,7 +8,7 @@ import CategoryGrid from '../category/CategoryGrid';
 function TopCategories() {
   const data = useStaticQuery(graphql`
     {
-      allSanityFeatured(filter: { _id: { eq: "featuredItems" } }) {
+      allSanityFeatured {
         nodes {
           categories {
             id
@@ -28,12 +28,12 @@ function TopCategories() {
       }
     }
   `);
-  const { categories } = data.allSanityFeatured.nodes[0];
+  const { categories } = data?.allSanityFeatured?.nodes[0];
 
   return (
     <TopCategoriesStyles>
       <SectionTitle>Top Categories</SectionTitle>
-      <ParagraphText className="info">Lorem Impsum sdjfald</ParagraphText>
+      {/* <ParagraphText className="info">Lorem Impsum sdjfald</ParagraphText> */}
       <CategoryGrid categories={categories} />
     </TopCategoriesStyles>
   );

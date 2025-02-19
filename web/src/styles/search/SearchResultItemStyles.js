@@ -22,7 +22,8 @@ export const SearchResultItemStyles = styled(Link)`
     a {
       color: var(--grey);
       &:hover {
-        text-decoration: underline;
+        text-decoration: var(--link-text-decoration);
+        text-underline-offset: var(--link-underline-offset);
       }
     }
   }

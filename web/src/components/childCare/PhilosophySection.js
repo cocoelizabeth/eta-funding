@@ -20,7 +20,7 @@ function PhilosophySection() {
     
   `);
 
-  const philosophy = data.allSanityChildCare.nodes[0].philosophy;
+  const philosophy = data?.allSanityChildCare?.nodes[0]?.philosophy ?? {};
  
 
 

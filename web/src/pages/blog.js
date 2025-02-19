@@ -8,7 +8,7 @@ const BlogPage = () => (
     {/* <HeroSection /> */}
     <section>
        <FeaturedBlogs />
-      {/* <TopCategories />  */}
+      <TopCategories /> 
     </section>
   </>
 );

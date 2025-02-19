@@ -89,6 +89,11 @@ const GlobalStyles = createGlobalStyle`
 
   }
 
+  :root {
+    --link-text-decoration: underline;
+    --link-underline-offset: .4rem;
+  }
+
 @media only screen and (min-width: 1280px) {
     :root {
         --font-size-small: 1.4rem;

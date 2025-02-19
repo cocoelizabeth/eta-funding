@@ -24,7 +24,8 @@ export const BlogItemStyles = styled.div`
     a {
       color: var(--gray);
       &:hover {
-        text-decoration: underline;
+        text-decoration: var(--link-text-decoration);
+        text-underline-offset: var(--link-underline-offset);
       }
     }
   }

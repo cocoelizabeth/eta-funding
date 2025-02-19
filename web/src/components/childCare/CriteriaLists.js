@@ -34,7 +34,7 @@ function CriteriaLists() {
     }
   `);
 
-  const content = data.allSanityChildCare.nodes[0].criteriaListsContent;
+  const content = data?.allSanityChildCare?.nodes[0]?.criteriaListsContent ?? {};
 
   
   // const contentBlocks = [
@@ -54,26 +54,26 @@ function CriteriaLists() {
   return (
     <CriteriaListsStyles>
       <section className="sectionHeadingContainer">
-        <div className="headlineText h2">{content.sectionHeading}</div>
+        <div className="headlineText h2">{content?.sectionHeading ?? "Default Section Heading"}</div>
       </section>
       <section>
 
         <div className="criteriaListContainer">
-          <div className="categoryTitle h2">{content.list1.headerText}</div>
+          <div className="categoryTitle h2">{content?.list1?.headerText ?? "Default Header"}</div>
           <div className="criteriaListText">
-            <MyPortableText value={content.list1._rawSubText} />
+            <MyPortableText value={content?.list1?._rawSubText ?? ""} />
           </div>
         </div>
         <div className="criteriaListContainer">
-          <div className="categoryTitle h2">{content.list2.headerText}</div>
+          <div className="categoryTitle h2">{content?.list2?.headerText ?? "Default Header"}</div>
           <div className="criteriaListText">
-            <MyPortableText value={content.list2._rawSubText} />
+            <MyPortableText value={content?.list2?._rawSubText ?? ""} />
           </div>
         </div>
           <div className="criteriaListContainer">
-          <div className="categoryTitle h2">{content.list3.headerText}</div>
+          <div className="categoryTitle h2">{content?.list3?.headerText ?? "Default Header"}</div>
           <div className="criteriaListText">
-            <MyPortableText value={content.list3._rawSubText} />
+            <MyPortableText value={content?.list3?._rawSubText ?? ""} />
           </div>
         </div>
 

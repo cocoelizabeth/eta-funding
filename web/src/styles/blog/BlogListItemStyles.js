@@ -19,7 +19,8 @@ export const BlogListItemStyles = styled.div`
 
   .categoriesText {
     a {
-      text-decoration: underline;
+      text-decoration: var(--link-text-decoration);
+      text-underline-offset: var(--link-underline-offset);
       pointer: cursor;
       font-weight: var(--font-weight-bold);
     }
@@ -27,7 +28,7 @@ export const BlogListItemStyles = styled.div`
   .title {
     text-transform: uppercase;
     padding-bottom: calc((var(--grid-gutter) * 2) + 2rem);
- pointer: cursor;
+    pointer: cursor;
 
   }
   .title:hover {
