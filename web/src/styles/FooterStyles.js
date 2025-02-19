@@ -27,10 +27,13 @@ export const FooterStyles = styled.footer`
 
     .footer__logo_svg {
       line-height: 0;
+
     }
 
     .footer__logo_svg a svg{
       max-height: 50px;
+      max-width: 100px;
+
     }
     .footer__contactLinks {
       text-decoration: var(--link-text-decoration);
@@ -76,4 +79,11 @@ export const FooterStyles = styled.footer`
       text-align: center;
     }
   }
+
+  @media only screen and (min-width: 720px) {
+    .footer__wrapper .footer__logo_svg a svg{
+      max-width: 3000px;
+    }
+  }
+
 `;
