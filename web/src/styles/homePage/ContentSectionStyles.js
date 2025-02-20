@@ -10,7 +10,7 @@ export const ContentSectionStyles = styled.div`
     padding-bottom: var(--page-intro-small);
     border-bottom: 1px solid var(--racome-teal);
     p {
-      margin-bottom: 3rem;
+      /* margin-bottom: 3rem; */
     }
     p:last-of-type {
       margin-bottom: 0;
@@ -109,7 +109,7 @@ export const ContentSectionStyles = styled.div`
     padding-bottom: var(--page-intro-small);
     border-bottom: 1px solid var(--racome-teal);
     p {
-      margin-bottom: 6rem;
+      /* margin-bottom: 6rem; */
     }
   }
   }
