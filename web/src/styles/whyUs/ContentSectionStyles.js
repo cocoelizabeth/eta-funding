@@ -8,6 +8,10 @@ export const ContentSectionStyles = styled.div`
   padding-top: calc(6rem - 4rem);
   padding-bottom: calc(6rem - 4rem);
 
+  .contentSection__introText {
+    padding-top: 4rem;
+  }
+
   .contentSection__grid_row {
     grid-template-columns: 100%;
     p {
@@ -31,6 +35,9 @@ export const ContentSectionStyles = styled.div`
   @media only screen and (min-width: 720px) {
     padding-top: calc(10.3rem - (var(--grid-gutter) * 3));
     padding-bottom: calc(10.3rem - 4rem);
+    .contentSection_smallHeading {
+      padding-top: calc(var(--grid-gutter) * 3);
+    }
     .contentSection__grid_row {
       display: grid;
       grid-template-columns: 1fr 1fr;
