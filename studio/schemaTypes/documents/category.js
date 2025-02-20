@@ -1,11 +1,11 @@
-import { MdCategory } from 'react-icons/md';
+import { FaShapes } from "react-icons/fa6";
 import { defineType, defineField } from 'sanity';
 
 export default defineType({
   title: 'Category',
   name: 'category',
   type: 'document',
-  icon: MdCategory,
+  icon: FaShapes,
   fields: [
     defineField({
       name: 'title',

@@ -1,7 +1,7 @@
 import { defineType, defineField } from 'sanity';
 
 export default defineType({
-  title: 'Our Process',
+  title: 'Our Process - Ignore',
   name: 'ourProcess',
   type: 'document',
   fields: [

@@ -1,11 +1,11 @@
 import { defineType, defineField } from 'sanity';
-import { MdPerson } from 'react-icons/md';
+import { FaSearch } from "react-icons/fa";
 
 export default defineType({
   title: 'What We Look For',
   name: 'whatWeLookFor',
   type: 'document',
-  icon: MdPerson,
+  icon: FaSearch,
   fields: [
     defineField({
       title: 'SEO',

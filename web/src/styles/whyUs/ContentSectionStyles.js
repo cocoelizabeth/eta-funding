@@ -23,6 +23,10 @@ export const ContentSectionStyles = styled.div`
       text-transform: uppercase;
     }
   }
+  
+  .contentSection_smallHeading {
+    text-transform: uppercase;
+  }
 
   @media only screen and (min-width: 720px) {
     padding-top: calc(10.3rem - (var(--grid-gutter) * 3));
@@ -44,15 +48,14 @@ export const ContentSectionStyles = styled.div`
         border-top: none;
         padding-top: 0px;
       }
-      p {
-        margin-bottom: 2rem;
-        strong {
-          font-weight: var(--font-weight-h5);
+      .contentSection_smallHeading {
+        font-weight: var(--font-weight-h5);
           font-size: var(--font-size-h5);
           line-height: var(--line-height-h5);
           letter-spacing: var(--letter-spacing-h5);
-          text-transform: uppercase;
-        }
+      }
+      p {
+        margin-bottom: 2rem;
         :first-child {
           grid-area: heading1;
           column: 1;
@@ -87,7 +90,7 @@ export const ContentSectionStyles = styled.div`
     .contentSection_smallHeading {
       border-top: 1px solid var(--racoma-teal);
       :before {
-        content: "●";
+        /* content: "●"; */
         padding-right: 10px;
       }
     }
@@ -95,6 +98,16 @@ export const ContentSectionStyles = styled.div`
       border-top: none;
     }
   }
+
+  .reason-item-title:before {
+    padding-right: 10px;
+  }
+
+  .reason-number-1:before {content: "1.";}
+  .reason-number-2:before {content: "2.";}
+  .reason-number-3:before {content: "3.";}
+  .reason-number-4:before {content: "4.";}
+
 
   @media only screen and (min-width: 720px) {
     .contentSection__grid_row {

@@ -8,8 +8,8 @@ export const menu = [
     path: '/what-we-look-for',
   },
   {
-    title: 'Why Us',
-    path: '/why-us',
+    title: 'Managed Fund',
+    path: '/managed-fund',
   },
   {
     title: 'Who We Are',

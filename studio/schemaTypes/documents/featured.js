@@ -1,11 +1,11 @@
-import { MdStar } from 'react-icons/md';
+import { FaStar } from 'react-icons/fa';
 import { defineType, defineField } from 'sanity';
 
 export default defineType({
   name: 'featured',
   title: 'Featured',
   type: 'document',
-  icon: MdStar,
+  icon: FaStar,
   fields: [
     defineField({
       name: 'title', // Fixed casing (should be lowercase to match convention)

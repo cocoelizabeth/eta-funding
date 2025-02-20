@@ -1,12 +1,12 @@
 import format from 'date-fns/format';
-import { GiNotebook } from 'react-icons/gi';
 import { defineType, defineField } from 'sanity';
+import { FaPenToSquare } from 'react-icons/fa6';
 
 export default defineType({
   title: 'Blog Post',
   name: 'blog',
   type: 'document',
-  icon: GiNotebook,
+  icon: FaPenToSquare,
   fields: [
     defineField({
       title: 'Title',

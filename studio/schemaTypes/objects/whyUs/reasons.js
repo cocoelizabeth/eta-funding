@@ -11,6 +11,11 @@ export default defineType({
   fieldsets: [{ name: 'reasons', title: 'Reasons' }],
   fields: [
     defineField({
+      name: 'introText',
+      title: 'Intro Text',
+      type: 'normalText',
+    }),
+    defineField({
       name: 'reason1',
       title: 'Reason 1',
       type: 'textBlock',

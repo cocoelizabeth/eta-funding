@@ -1,11 +1,11 @@
-import { MdPerson } from 'react-icons/md';
+import { FaHome } from "react-icons/fa";
 import { defineType, defineField } from 'sanity';
 
 export default defineType({
   title: 'Home',
   name: 'home',
   type: 'document',
-  icon: MdPerson,
+  icon: FaHome,
   fields: [
     defineField({
       title: 'SEO',

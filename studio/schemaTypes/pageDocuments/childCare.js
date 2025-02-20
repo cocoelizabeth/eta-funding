@@ -2,7 +2,7 @@ import { MdChildCare } from 'react-icons/md';
 import { defineType, defineField } from 'sanity';
 
 export default defineType({
-  title: 'Child Care',
+  title: 'Child Care - Ignore',
   name: 'childCare',
   type: 'document',
   icon: MdChildCare,

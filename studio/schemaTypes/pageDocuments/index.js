@@ -3,6 +3,17 @@ import childCare from './childCare.js';
 import ourProcess from './ourProcess.js';
 import whatWeLookFor from './whatWeLookFor.js';
 import whoWeAre from './whoWeAre.js';
-import whyUs from './whyUs.js';
+import managedFund from './managedFund.js';
+import whyUs from './whyUs'
 
-export default [home, childCare, ourProcess, whatWeLookFor, whoWeAre, whyUs];
+export default [
+    home, 
+
+    whatWeLookFor,
+    managedFund,
+    whyUs, 
+    whoWeAre, 
+    
+    childCare, // delete later
+    ourProcess,  // delete later
+];

@@ -73,7 +73,7 @@ import pageDocuments from './pageDocuments/index.js';
 
 
 export default [
-  ...documents,
   ...objects,
-  ...pageDocuments
+  ...pageDocuments,
+  ...documents,
 ];

@@ -1,9 +1,12 @@
 import { defineType, defineField } from 'sanity';
+import { FaUsers } from "react-icons/fa";
+
 
 export default defineType({
   title: 'Who We Are',
   name: 'whoWeAre',
   type: 'document',
+  icon: FaUsers,
   fields: [
     defineField({
       title: 'SEO',

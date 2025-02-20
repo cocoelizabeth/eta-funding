@@ -8,10 +8,9 @@ import TextBlockCTAItem from './TextBlockCTAItem';
 function ContentSection() {
   const data = useStaticQuery(graphql`
     {
-      allSanityWhyUs {
+      allSanityManagedFund {
         nodes {
           contentSection {
-          _rawIntroText
             reason1 {
               headerText
               _rawSubText
@@ -38,14 +37,16 @@ function ContentSection() {
     }
   `);
 
-  const content = data.allSanityWhyUs.nodes[0].contentSection;
+  const content = data?.allSanityManagedFund?.nodes[0]?.contentSection ?? {};
   const contentBlocks = [
     content.reason1,
     content.reason2,
     content.reason3,
     content.reason4,
   ];
+  
   const contentBlockItems = contentBlocks.map((item) => (
+    
     <TextBlockCTAItem
       headerText={item.headerText}
       _rawSubText={item._rawSubText}
@@ -58,45 +59,39 @@ function ContentSection() {
   return (
     <ContentSectionStyles>
       <section>
-
+        {/* <div className="contentSection__introText h3">
+          <MyPortableText value={content._rawIntroText} />
+        </div> */}
         {/* <div className="contentSection__grid">
           {contentBlockItems}
         </div> */}
-                <div className="contentSection__introText h3">
-          <MyPortableText value={content._rawIntroText} />
-        </div>
-        <div>
         <div className="contentSection__grid_row">
           <p className="contentSection_smallHeading">
-            <strong className="reason-item-title reason-number-1">{content.reason1.headerText}</strong>
+            <strong>{content.reason1.headerText}</strong>
           </p>
           <MyPortableText value={content.reason1._rawSubText} />
           {/* BLOCK 2 */}
 
           <p className="contentSection_smallHeading">
-            <strong className="reason-item-title reason-number-2">{content.reason2.headerText}</strong>
+            <strong>{content.reason2.headerText}</strong>
           </p>
           <MyPortableText value={content.reason2._rawSubText} />
          
         </div>
         <div className="contentSection__grid_row">
           <p className="contentSection_smallHeading">
-            <strong className="reason-item-title reason-number-3">{content.reason3.headerText}</strong>
+            <strong>{content.reason3.headerText}</strong>
           </p>
           <MyPortableText value={content.reason3._rawSubText} />
         
           {/* BLOCK 2 */}
 
           <p className="contentSection_smallHeading">
-            <strong className="reason-item-title reason-number-4">{content.reason4.headerText}</strong>
+            <strong>{content.reason4.headerText}</strong>
           </p>
           <MyPortableText value={content.reason4._rawSubText} />
 
         </div>
-
-        </div>
-        
-
         {/* <BlogGrid blogs={featuredBlogs} /> */}
       </section>
     </ContentSectionStyles>
