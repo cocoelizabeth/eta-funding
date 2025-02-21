@@ -10,7 +10,7 @@ function HeroSection() {
       allSanityHome {
         nodes {
           hero {
-            headlineText
+            _rawHeadlineTextCustom
             _rawSubHeadlineText
             cta
             link
@@ -20,7 +20,7 @@ function HeroSection() {
     }
   `);
 
-  const hero = data?.allSanityHome?.nodes?.[0]?.hero ?? {}; // Add fallback to prevent error
+const hero = data?.allSanityHome?.nodes?.[0]?.hero ?? {}; // Add fallback to prevent error
 
 
   return (
@@ -28,7 +28,13 @@ function HeroSection() {
 
       <section>
         <div className="hero__wrapper">
-          <div className="headlineText h2">{hero.headlineText}</div>
+          <div className="headlineText h2">
+            <MyPortableText 
+              className="headlineText h2"
+              value={hero._rawHeadlineTextCustom}
+            />
+          </div>
+
           <div className="subheadingText">
             <MyPortableText
               className="subheadingText__text"

@@ -94,13 +94,19 @@ export const ContentSectionStyles = styled.div`
     .contentSection_smallHeading {
       border-top: 1px solid var(--racoma-teal);
       :before {
-        /* content: "●"; */
         padding-right: 10px;
+      }
+      p {
+        padding-bottom: 0;
       }
     }
     .contentSection_smallHeading:first-of-type {
       border-top: none;
     }
+  }
+
+  .reason-item-title {
+    display:  flex;
   }
 
   .reason-item-title:before {

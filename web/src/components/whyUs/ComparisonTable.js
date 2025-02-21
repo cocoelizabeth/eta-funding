@@ -10,7 +10,7 @@ function ComparisonTable() {
       allSanityWhyUs {
         nodes {
           hero {
-            headerText
+            _rawHeadlineTextCustom
             _rawSubText
           }
         }

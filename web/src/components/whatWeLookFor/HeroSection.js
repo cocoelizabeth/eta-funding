@@ -10,7 +10,7 @@ function HeroSection() {
       allSanityWhatWeLookFor {
         nodes {
           hero {
-            headerText
+            _rawHeadlineTextCustom
             _rawSubText
           }
         }
@@ -21,20 +21,7 @@ function HeroSection() {
   const { hero } = data.allSanityWhatWeLookFor.nodes[0];
 
   return (
-    // <HeroSectionStyles>
-    //   <section>
-    //     <div className="hero__wrapper">
-    //       <div className="headlineText h2">{hero.headerText}</div>
-    //       <div className="subheadingText">
-    //         <MyPortableText className="criteraList" value={hero._rawSubText} />
-    //         {/* <Button to={hero.link} tag={Link} className="heroCTA">
-    //           {hero.cta}
-    //         </Button> */}
-    //       </div>
-    //     </div>
-    //   </section>
-    // </HeroSectionStyles>
-    <HeroSectionTemplate heading={hero.headerText} subheading={hero._rawSubText}/>
+    <HeroSectionTemplate heading={hero._rawHeadlineTextCustom} subheading={hero._rawSubText}/>
   );
 }
 

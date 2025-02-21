@@ -12,23 +12,23 @@ function ContentSection() {
         nodes {
           contentSection {
             reason1 {
-              headerText
+              _rawHeadlineTextCustom
               _rawSubText
               _key
             }
             reason2 {
-              headerText
+              _rawHeadlineTextCustom
               _rawSubText
               _key
             }
             reason3 {
               _key
               _rawSubText
-              headerText
+              _rawHeadlineTextCustom
             }
             reason4 {
               _key
-              headerText
+              _rawHeadlineTextCustom
               _rawSubText
             }
           }
@@ -48,7 +48,7 @@ function ContentSection() {
   const contentBlockItems = contentBlocks.map((item) => (
     
     <TextBlockCTAItem
-      headerText={item.headerText}
+      headerText={item._rawHeadlineTextCustom}
       _rawSubText={item._rawSubText}
       // cta={item.cta}
       // link={item.link}
@@ -67,27 +67,35 @@ function ContentSection() {
         </div> */}
         <div className="contentSection__grid_row">
           <p className="contentSection_smallHeading">
-            <strong>{content.reason1.headerText}</strong>
+            <strong>
+            <MyPortableText value={content.reason1._rawHeadlineTextCustom}/>
+            </strong>
           </p>
           <MyPortableText value={content.reason1._rawSubText} />
           {/* BLOCK 2 */}
 
           <p className="contentSection_smallHeading">
-            <strong>{content.reason2.headerText}</strong>
+            <strong>
+            <MyPortableText value={content.reason2._rawHeadlineTextCustom}/>
+            </strong>
           </p>
           <MyPortableText value={content.reason2._rawSubText} />
          
         </div>
         <div className="contentSection__grid_row">
           <p className="contentSection_smallHeading">
-            <strong>{content.reason3.headerText}</strong>
+            <strong>
+            <MyPortableText value={content.reason3._rawHeadlineTextCustom}/>
+            </strong>
           </p>
           <MyPortableText value={content.reason3._rawSubText} />
         
           {/* BLOCK 2 */}
 
           <p className="contentSection_smallHeading">
-            <strong>{content.reason4.headerText}</strong>
+            <strong>
+              <MyPortableText value={content.reason4._rawHeadlineTextCustom}/>
+            </strong>
           </p>
           <MyPortableText value={content.reason4._rawSubText} />
 

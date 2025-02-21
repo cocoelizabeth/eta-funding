@@ -48,6 +48,18 @@ module.exports = {
       typekit: {
         id: process.env.GATSBY_ADOBE_FONT_PROJECT_ID,
       },
+      google: {
+        families: [
+          'Droid Sans', 
+          'Droid Serif', 
+          'Newsreader', 
+          'Outfit', 
+          'Young Serif', 
+          'IBM Plex Sans', 
+          "IBM Plex Serif",
+          "Plus Jakarta Sans",
+        ]
+      }
     },
   },
   {

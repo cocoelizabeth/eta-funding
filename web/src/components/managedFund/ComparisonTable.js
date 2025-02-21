@@ -10,7 +10,7 @@ function ComparisonTable() {
       allSanityManagedFund {
         nodes {
           hero {
-            headerText
+            _rawHeadlineTextCustom
             _rawSubText
           }
         }

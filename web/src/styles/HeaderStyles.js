@@ -99,18 +99,22 @@ export default styled.header`
 .header__logo_svg {
   line-height: 0;
   a {
-    height: 4.5rem;
+    height: 40px;
     svg {
-      max-width: 200px;
+      /* max-width: 200px; */
+      max-height: 40px;
     }
   }
 }
 
-@media only screen and (min-width: 1280px) {
+/* @media only screen and (min-width: 1280px) {
     .header__logo_svg  a {
      height: 5rem;
+     svg {
+      max-height: 5rem;
+     }
     }
-  }
+  } */
 
   .nav__wrapper {
     ul {

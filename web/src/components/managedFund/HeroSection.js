@@ -8,7 +8,7 @@ function HeroSection() {
       allSanityManagedFund {
         nodes {
           hero {
-            headerText
+            _rawHeadlineTextCustom
             _rawSubText
           }
         }
@@ -19,25 +19,9 @@ function HeroSection() {
   const { hero } = data.allSanityManagedFund.nodes[0];
 
   return (
-    // <HeroSectionStyles>
-    //   <section>
-    //     <div className="hero__wrapper">
-    //       <div className="headlineText h2">{hero.headerText}</div>
-    //       <div className="subheadingText">
-    //         <MyPortableText
-    //           className="subheadingText__text"
-    //           value={hero._rawSubText}
-    //         />
-    //         {/* <Button to={hero.link} tag={Link} className="heroCTA">
-    //           {hero.cta}
-    //         </Button> */}
-    //       </div>
-    //     </div>
-
-    //   </section>
     // </HeroSectionStyles>
     <HeroSectionTemplate
-      heading={hero.headerText}
+      heading={hero._rawHeadlineTextCustom}
       subheading={hero._rawSubText}
     />
   );

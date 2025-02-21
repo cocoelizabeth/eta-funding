@@ -24,7 +24,7 @@ function ContentSection() {
           linkedInUrl
           about {
             _rawSubText
-            headerText
+            _rawHeadlineTextCustom
           }
           seo {
             title
@@ -34,7 +34,7 @@ function ContentSection() {
             description
           }
           capitalPartners {
-            headerText
+            _rawHeadlineTextCustom
             _rawSubText
           }
         }
@@ -52,11 +52,11 @@ function ContentSection() {
   const linkedInUrl = content.linkedInUrl;
   const email = "mailto:".concat(content.email);
   const about = {
-    title: content.about.headerText,
+    title: content.about._rawHeadlineTextCustom,
     body: content.about._rawSubText,
   }
   const capitalPartners = {
-    title: content.capitalPartners.headerText,
+    title: content.capitalPartners._rawHeadlineTextCustom,
     body: content.capitalPartners._rawSubText,
   }
   
@@ -104,7 +104,7 @@ function ContentSection() {
 
         <div className="capitalPartnersContainer">
           <div className="sectionTitle">
-            <h2>{content.capitalPartners.headerText}</h2>
+            <h2><MyPortableText className="criteraList" value={capitalPartners.title} /></h2>
           </div>
           <div className="aboutContainer">
             <div className="about body">

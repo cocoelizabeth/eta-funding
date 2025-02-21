@@ -1,27 +1,26 @@
 import styled from 'styled-components';
 
 export const HeroSectionStyles = styled.div`
-.
+
 
   margin-top: 0;
   background-color: var(--racoma-teal);
   color: var(--racoma-light);
-  ${'' /* margin-bottom: var(--page-intro-small); */}
+
   .hero__wrapper {
     position: relative;
 
     margin-top: 0;
 
-    ${"" /* margin-bottom: var(--page-section); */}
   }
   .hero__wrapper .h2 {
     position: relative;
     padding-top: var(--page-intro-small);
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 
   .headlineText {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     width: 100%;
     font-size: 4rem;
   }

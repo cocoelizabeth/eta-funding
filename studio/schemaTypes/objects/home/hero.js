@@ -12,13 +12,13 @@ export default defineType({
   fields: [
     defineField({
       title: 'Headline Text',
-      name: 'headlineText',
-      type: 'string',
+      name: 'headlineTextCustom',
+      type: 'richText',
     }),
     defineField({
       title: 'Sub Headline Text',
       name: 'subHeadlineText',
-      type: 'normalText',
+      type: 'richText',
       fieldset: 'subHeadline',
     }),
     defineField({

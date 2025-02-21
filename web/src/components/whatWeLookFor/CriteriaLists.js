@@ -13,17 +13,17 @@ function CriteriaLists() {
           contentSection {
             list1 {
               _key
-              headerText
+              _rawHeadlineTextCustom
               _rawSubText
             }
             list2 {
               _key
-              headerText
+              _rawHeadlineTextCustom
               _rawSubText
             }
             list3 {
               _key
-              headerText
+              _rawHeadlineTextCustom
               _rawSubText
             }
 
@@ -54,19 +54,25 @@ function CriteriaLists() {
     <CriteriaListsStyles>
       <section>
         <div className="criteriaListContainer">
-          <div className="categoryTitle h2">{content.list1.headerText}</div>
+          <div className="categoryTitle h2">
+            <MyPortableText value={content.list1._rawHeadlineTextCustom}/>
+          </div>
           <div className="criteriaListText">
             <MyPortableText value={content.list1._rawSubText} />
           </div>
         </div>
         <div className="criteriaListContainer">
-          <div className="categoryTitle h2">{content.list2.headerText}</div>
+          <div className="categoryTitle h2">
+            <MyPortableText value={content.list2._rawHeadlineTextCustom}/>
+          </div>
           <div className="criteriaListText">
             <MyPortableText value={content.list2._rawSubText} />
           </div>
         </div>
           <div className="criteriaListContainer">
-          <div className="categoryTitle h2">{content.list3.headerText}</div>
+          <div className="categoryTitle h2">
+            <MyPortableText value={content.list3._rawHeadlineTextCustom}/>
+          </div>
           <div className="criteriaListText">
             <MyPortableText value={content.list3._rawSubText} />
           </div>

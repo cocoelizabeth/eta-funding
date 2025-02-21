@@ -10,9 +10,9 @@ export default defineType({
   },
   fields: [
     defineField({
-      title: 'Header Text',
-      name: 'headerText',
-      type: 'string',
+      title: 'Headline Text',
+      name: 'headlineTextCustom',
+      type: 'richText',
     }),
     defineField({
       title: 'Sub Text',

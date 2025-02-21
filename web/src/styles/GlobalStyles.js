@@ -54,6 +54,12 @@ const GlobalStyles = createGlobalStyle`
     --font-weight-regular: 400;
     --font-weight-medium: 500;
     --font-weight-bold: 600;
+/* 
+    //ELZA TEXT
+    --font-family: 'Plus Jakarta Sans', Helvetica, sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 600; */
 
 
     --font-size-h1: 4rem;
@@ -250,7 +256,7 @@ sup {
 
 ${'' /* HEADER STYLES */}
 :root {
- --header-height: calc(32px + ((1.5rem + 2.5vw) * 2));
+ --header-height: calc(40px + ((1.5rem + 2.5vw) * 2));
  --footer-height: calc(1.5rem + 2.5vw + 32px + 3rem + 42px + 3rem + var(--page-intro-small))
 }
 

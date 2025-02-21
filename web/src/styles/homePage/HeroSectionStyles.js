@@ -27,11 +27,11 @@ export const HeroSectionStyles = styled.div`
   .hero__wrapper .h2 {
     position: relative;
     padding-top: var(--page-intro-small);
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 
   .headlineText {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     width: 100%;
     font-size: 4rem;
     ${
@@ -102,6 +102,14 @@ export const HeroSectionStyles = styled.div`
 
   .headlineText {
     ${'' /* animation: slide-in-from-right 1.7s ease-out 0s 1; */}
+    /* font-family: 'Newsreader';
+    letter-spacing: -2px;
+    font-weight: 400;
+    font-size: 6vw;
+    em {
+      font-style: italic;
+      font-family: "Newsreader variant1";
+    } */
   }
 
   .subheadingText {

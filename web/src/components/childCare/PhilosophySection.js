@@ -11,7 +11,7 @@ function PhilosophySection() {
       allSanityChildCare {
         nodes {
             philosophy{
-              headerText
+              _rawHeadlineTextCustom
               _rawSubText
             }
           }
@@ -33,7 +33,9 @@ function PhilosophySection() {
         </div> */}
         <div className="contactSection__wrapper">
           <div className="headingWrapper">
-            <h2 className="h2">{philosophy.headerText}</h2>
+            <h2 className="h2">
+              <MyPortableText value={philosophy._rawHeadlineTextCustom}/>
+            </h2>
           </div>
 
           <div className="textWrapper">

@@ -10,7 +10,7 @@ function HeroSection() {
       allSanityOurProcess {
         nodes {
           hero {
-            headerText
+            _rawHeadlineTextCustom
             _rawSubText
           }
         }
@@ -21,21 +21,8 @@ function HeroSection() {
   const hero = data?.allSanityOurProcess?.nodes[0] ?? {};
 
   return (
-    // <HeroSectionStyles>
-    //   <section>
-    //     <div className="hero__wrapper">
-    //       <div className="headlineText h2">{hero.headerText}</div>
-    //       <div className="subheadingText">
-    //         <MyPortableText className="criteraList" value={hero._rawSubText} />
-    //         {/* <Button to={hero.link} tag={Link} className="heroCTA">
-    //           {hero.cta}
-    //         </Button> */}
-    //       </div>
-    //     </div>
-    //   </section>
-    // </HeroSectionStyles>
     <HeroSectionTemplate
-      heading={hero?.headerText ?? "Default Header"}
+      heading={hero?._rawHeadlineTextCustom ?? "Default Header"}
       subheading={hero?._rawSubText ?? "Default subtext"}
     />
   );

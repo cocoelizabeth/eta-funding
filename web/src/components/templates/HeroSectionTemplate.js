@@ -6,7 +6,11 @@ function HeroSectionTemplate({ heading, subheading }) {
     <HeroSectionTemplateStyles>
       <section>
         <div className="hero__wrapper">
-          <div className="headlineText h2">{heading}</div>
+    
+          <div className="headlineText h2">
+            <MyPortableText className="headlineText h2" value={heading} />
+          </div>
+          
           <div className="subheadingText">
             <MyPortableText className="criteraList" value={subheading} />
           </div>
