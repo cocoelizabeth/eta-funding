@@ -16,6 +16,9 @@ const myPortableTextComponents = {
     li: ({ children }) => <li>{children}</li>,
     ol: ({ children }) => <ol className="custom-ordered-list">{children}</ol>,
   },
+  marks: {
+    underline: ({ children }) => <u className="custom-underline">{children}</u>
+  },
   types: {
     customCode: ({ value }) => (
       <SyntaxHighlighter

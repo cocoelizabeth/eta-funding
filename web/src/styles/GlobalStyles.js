@@ -280,6 +280,10 @@ section {
     padding-left: var(--grid-padding);
 }
 
+.custom-underline {
+text-underline-offset: .4rem;
+}
+
 :root {
     --grid-width: 100vw;
     --grid-height: 100vh;

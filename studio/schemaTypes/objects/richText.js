@@ -21,6 +21,7 @@ export default defineType({
         decorators: [
           { title: 'Strong', value: 'strong' },
           { title: 'Emphasis', value: 'em' },
+          { title: "Underline", value: "underline" }, 
         ],
         annotations: [
           defineField({

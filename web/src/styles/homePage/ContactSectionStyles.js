@@ -16,6 +16,9 @@ export const ContactSectionStyles = styled.div`
         margin-bottom: 3rem;
       }
     }
+    .subheadingText {
+      font-size: 2rem;
+    }
     .contactSection__cta {
       margin-top: 3rem;
     }

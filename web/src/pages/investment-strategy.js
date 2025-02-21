@@ -5,7 +5,7 @@ import ContentSection from "../components/whyUs/ContentSection";
 import ComparisonTable from "../components/whyUs/ComparisonTable";
 const WhyUsPage = () => (
   <>
-    <SEO title="Why Us | ETA FUNDING" />
+    <SEO title="Investment Strategy | ETA FUNDING" />
     <HeroSection />
     <ContentSection />
     {/* <ComparisonTable /> */}
@@ -16,4 +16,4 @@ const WhyUsPage = () => (
 
 export default WhyUsPage;
 
-export const Head = () => <SEO title="Why Us | ETA FUNDING" />;
+export const Head = () => <SEO title="Investment Strategy | ETA FUNDING" />;
