@@ -101,7 +101,7 @@ export default styled.header`
   a {
     height: 40px;
     svg {
-      /* max-width: 200px; */
+      max-width: 154px;
       max-height: 40px;
     }
   }
