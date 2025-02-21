@@ -38,6 +38,7 @@ export const ContentSectionStyles = styled.div`
     .contentSection_smallHeading {
       border-top: 1px solid var(--racoma-teal);
       padding-top: 4rem;
+      text-transform: uppercase;
     }
   }
 
@@ -59,15 +60,15 @@ export const ContentSectionStyles = styled.div`
       .contentSection_smallHeading {
         border-top: none;
         padding-top: 0px;
+        font-weight: var(--font-weight-h5);
+          font-size: var(--font-size-h5);
+          line-height: var(--line-height-h5);
+          letter-spacing: var(--letter-spacing-h5);
       }
       p {
         margin-bottom: 2rem;
         strong {
-          font-weight: var(--font-weight-h5);
-          font-size: var(--font-size-h5);
-          line-height: var(--line-height-h5);
-          letter-spacing: var(--letter-spacing-h5);
-          text-transform: uppercase;
+
         }
         :first-child {
           grid-area: heading1;

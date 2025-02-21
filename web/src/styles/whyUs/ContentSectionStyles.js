@@ -28,9 +28,6 @@ export const ContentSectionStyles = styled.div`
     }
   }
   
-  .contentSection_smallHeading {
-    text-transform: uppercase;
-  }
 
   @media only screen and (min-width: 720px) {
     padding-top: calc(10.3rem - (var(--grid-gutter) * 3));
