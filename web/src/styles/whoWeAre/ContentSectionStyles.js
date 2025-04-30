@@ -42,8 +42,8 @@ export const ContentSectionStyles = styled.div`
         }
       }
       .imageContainer {
-        filter: grayscale(100%);
-        -webkit-filter: grayscale(100%);
+        /* filter: grayscale(100%);
+        -webkit-filter: grayscale(100%); */
         display: flex;
         flex-direction: column;
         padding-right: 50%;
