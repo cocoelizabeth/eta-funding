@@ -32,9 +32,9 @@ function TopCategories() {
 
   return (
     <TopCategoriesStyles>
-      <SectionTitle>Top Categories</SectionTitle>
-      {/* <ParagraphText className="info">Lorem Impsum sdjfald</ParagraphText> */}
-      <CategoryGrid categories={categories} />
+      {/* <SectionTitle>Top Categories</SectionTitle>
+      <ParagraphText className="info">Lorem Impsum sdjfald</ParagraphText>
+      <CategoryGrid categories={categories} /> */}
     </TopCategoriesStyles>
   );
 }
