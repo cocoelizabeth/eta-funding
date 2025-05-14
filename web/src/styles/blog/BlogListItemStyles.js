@@ -26,7 +26,7 @@ export const BlogListItemStyles = styled.div`
     }
   }
   .title {
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     padding-bottom: calc((var(--grid-gutter) * 2) + 2rem);
     pointer: cursor;
 

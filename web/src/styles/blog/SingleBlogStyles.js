@@ -38,7 +38,7 @@ export const SingleBlogStyles = styled.div`
   }
   .title {
     ${"" /* width: 50%; */}
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     padding-bottom: 2rem;
   }
 
