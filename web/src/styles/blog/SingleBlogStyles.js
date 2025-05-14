@@ -70,6 +70,8 @@ export const SingleBlogStyles = styled.div`
       display: none;
     }
     a {
+      /* font-size: var(--font-size-small);
+   */
       text-transform: uppercase;
       text-decoration: var(--link-text-decoration);
       text-underline-offset: var(--link-underline-offset);
@@ -80,8 +82,56 @@ export const SingleBlogStyles = styled.div`
       }
     }
   }
+
+
+  
   .body {
     padding-top: var(--page-intro-small);
+    a {
+        text-decoration: var(--link-text-decoration);
+        text-underline-offset: var(--link-underline-offset);
+        &:hover {
+        text-decoration: var(--link-text-decoration);
+        text-underline-offset: var(--link-underline-offset);
+        color: var(--racoma-navy);
+      }
+   
+      }
+
+      ol {
+        counter-reset: css-counter;
+
+          li {
+            counter-increment: css-counter;
+          }
+
+          li::before {
+              content: counter(css-counter) ".";
+          }
+      }
+
+      ul > li:before {
+        content: "•";
+
+      }
+
+    
+
+     li {
+        position: relative;
+        overflow: hidden;
+        padding: 0 0 1.5rem 1.5rem;
+        strong {
+          /* text-transform: uppercase; */
+        }
+      }
+      li:before {
+        font-weight: var(--font-weight-bold);
+        padding-right: 20px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+      }
   }
   ${
     "" /* .hr {
@@ -106,6 +156,11 @@ export const SingleBlogStyles = styled.div`
       font-size: 2rem;
     } */
   }
+
+  .h2 {
+    margin-bottom: 2rem;
+    padding-top: 3rem;
+  }
    @media only screen and (min-width: 720px) {
     .blog-header {
       flex-direction: row;
@@ -124,14 +179,8 @@ export const SingleBlogStyles = styled.div`
       padding-right: var(--grid-gutter);
       padding-left: calc(var(--grid-gutter) * 4);
       padding-top: 0;
-      a {
-        text-decoration: var(--link-text-decoration);
-        text-underline-offset: var(--link-underline-offset);
-      }
-      ul > li:before {
-        content: "•";
-        margin-right: 5px;
-      }
+
+
     }
   }
 `;
