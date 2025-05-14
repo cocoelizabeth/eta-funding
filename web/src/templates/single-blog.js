@@ -65,7 +65,7 @@ function SingleBlog({ data }) {
               <span className="h5">
                 {blog.categories.map((item, index) => (
                   <span key={item.slug.current}>
-                    <Link to={`/categories/${item.slug.current}`}>
+                    <Link to={`/blog/categories/${item.slug.current}`}>
                       {item.title}
                     </Link>
                     {index < blog.categories.length - 1 ? ", " : ""}
