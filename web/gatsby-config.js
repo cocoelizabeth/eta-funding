@@ -51,7 +51,7 @@ module.exports = {
       google: {
         families: [
           "Inter",
-
+        ]
       }
     },
   },
