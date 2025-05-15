@@ -8,6 +8,7 @@ export default styled.header`
   ${'' /* overflow: hidden; */}
   transition: background 0.3s ease-in-out;
   will-change: transform;
+  border-bottom: 1px solid var(--racoma-light);
 
   .header__logo,
   .header__logoDummy {
@@ -29,7 +30,9 @@ export default styled.header`
     align-items: center;
     padding: calc(1.5rem + 2.5vw) var(--grid-padding);
     width: 100%;
-    border-bottom: 1px solid var(--racoma-light);
+    /* max-width: 1600px; */
+    margin: 0 auto;
+    /* border-bottom: 1px solid var(--racoma-light); */
   }
 
   @media only screen and (min-width: 1280px) {

@@ -50,15 +50,8 @@ module.exports = {
       },
       google: {
         families: [
-          'Droid Sans', 
-          'Droid Serif', 
-          'Newsreader', 
-          'Outfit', 
-          'Young Serif', 
-          'IBM Plex Sans', 
-          "IBM Plex Serif",
-          "Plus Jakarta Sans",
-        ]
+          "Inter",
+
       }
     },
   },

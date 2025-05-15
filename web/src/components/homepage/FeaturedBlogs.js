@@ -35,14 +35,24 @@ function FeaturedBlogs() {
     }
   `);
 
-  const featuredBlogs = data.allSanityFeatured.nodes[0].blogs;
+  const featuredBlogs = data.allSanityFeatured.nodes[0].blogs || [];
+
+  // sort blogs in DESC order
+  const featuredBlogsSorted = featuredBlogs
+  .slice() // avoid mutating the original array
+  .sort((a, b) => {
+    const dateA = a.publishedAt ? new Date(a.publishedAt) : new Date(0); // fallback to epoch
+    const dateB = b.publishedAt ? new Date(b.publishedAt) : new Date(0);
+    return dateB - dateA; // descending (most recent first)
+    return dateB - dateA;
+  });
 
   return (
     <FeaturedBlogsStyles>
       <h1>Featured Blogs</h1>
       <ParagraphText className="featuredBlogs__text"></ParagraphText>
-      <BlogList blogs={featuredBlogs} />
-      {/* <BlogGrid blogs={featuredBlogs} /> */}
+      <BlogList blogs={featuredBlogsSorted} />
+      {/* <BlogGrid blogs={featuredBlogsSorted} /> */}
     </FeaturedBlogsStyles>
   );
 }

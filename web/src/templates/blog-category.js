@@ -64,6 +64,7 @@ query BlogsByCategory($id: String!) {
 
   allSanityBlog(
     filter: { categories: { elemMatch: { id: { eq: $id } } } }
+    sort: { fields: publishedAt, order: DESC }
   ) {
 
       nodes {
@@ -101,7 +102,7 @@ query BlogsByCategory($id: String!) {
 `
 
 function BlogCategory({data}) {
-    debugger
+
     const blogs = data.allSanityBlog.nodes;
     const categoryTitle = data.allSanityCategory.nodes[0].title;
     const categoryDescription = data.allSanityCategory.nodes[0]._rawDescription;

@@ -14,8 +14,8 @@ export const ButtonStyles = styled(Link)`
   border-radius: 1.6rem;
 
 
-  // Elza Text Padding */
-  padding: 0.3rem 3rem 0;
+
+  padding: 0.3rem 3rem ;
   letter-spacing: normal;
 
   overflow: hidden;

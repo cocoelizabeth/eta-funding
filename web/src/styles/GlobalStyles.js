@@ -50,10 +50,18 @@ const GlobalStyles = createGlobalStyle`
 
 
     //ELZA TEXT
-    --font-family: elza-text, Helvetica, sans-serif;
+    /* --font-family: elza-text, Helvetica, sans-serif;
     --font-weight-regular: 400;
-    --font-weight-medium: 500;
-    --font-weight-bold: 600;
+    --font-weight-medium: 600;
+    --font-weight-bold: 600; */
+
+    //Inter
+    --font-family: Inter, Helvetica, sans-serif;
+    --font-weight-regular: 300;
+    --font-weight-medium: 400;
+    --font-weight-bold: 700;
+/* 
+
 /* 
     //ELZA TEXT
     --font-family: 'Plus Jakarta Sans', Helvetica, sans-serif;
@@ -280,10 +288,13 @@ ${'' /* HEADER STYLES */}
 main {
     padding-top: var(--header-height);
 
+
 }
 section {
     padding-right: var(--grid-padding);
     padding-left: var(--grid-padding);
+    /* max-width: 1600px; */
+    margin: 0 auto;
 }
 
 .custom-underline {
