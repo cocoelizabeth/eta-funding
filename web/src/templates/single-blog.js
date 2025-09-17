@@ -54,7 +54,7 @@ function SingleBlog({ data }) {
         </div>
         <div className="blog-header">
           <div className="left">
-            <div className="h1 title">{blog.title}</div>
+            <h1 className="h1 title">{blog.title}</h1>
             <hr className="hr" />
             <ParagraphText className="publishedAt h5">
               <FiCalendar />

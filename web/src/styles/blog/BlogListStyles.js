@@ -6,4 +6,5 @@ export const BlogListStyles = styled.div`
   flex-direction: column;
   border-top: 1px solid var(--racoma-light);
   padding-bottom: var(--page-section);
+
 `;

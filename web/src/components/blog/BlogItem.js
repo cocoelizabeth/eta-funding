@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { BlogItemStyles } from '../../styles/blog/BlogItemStyles'
-import { GatsbyImage } from 'gatsby-plugin-image'
+import {   } from 'gatsby-plugin-image'
 import { Title } from '../typography/Title'
 import ParagraphText from '../typography/ParagraphText'
 import {format} from 'date-fns'

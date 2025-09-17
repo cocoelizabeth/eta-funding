@@ -77,6 +77,11 @@ const GlobalStyles = createGlobalStyle`
     --font-size-h5: 1.8rem;
     --font-size-h6: 1.6rem;
 
+    // BLOG:
+    --blog-font-size-h1: 3rem;
+    --blog-font-size-h2: 2.5rem;
+    --blog-font-size-h3: 1.8rem;
+
 
 
     --line-height-h1: 0.9;
@@ -108,11 +113,40 @@ const GlobalStyles = createGlobalStyle`
     --link-underline-offset: .4rem;
   }
 
+@media only screen and (min-width: 480px) {
+    :root {
+        --font-size-h1: 4.6rem;
+        --blog-font-size-h1: 4rem;
+    }
+}
+
+
+@media only screen and (min-width: 720px) {
+    :root {
+        --blog-font-size-h1: 4rem;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    :root {
+        --font-size-h1:6.25vw;
+        --blog-font-size-h1: 3.5rem;
+    }
+}
+
 @media only screen and (min-width: 1280px) {
     :root {
         --font-size-small: 1.4rem;
         --font-size-body: 1.8rem;
         --font-size-large: 2.2rem;
+
+        --font-size-h2: 4.2rem;
+        --font-size-h3: 3.8rem;
+        --font-size-h4: 2.8rem;
+        --font-size-h5: 2.2rem;
+        --font-size-h6: 2.2rem;
+
+        --blog-font-size-h1: 4rem;
     }
 }
 
@@ -122,27 +156,7 @@ const GlobalStyles = createGlobalStyle`
     }
 }
 
-@media only screen and (min-width: 480px) {
-    :root {
-        --font-size-h1: 4.6rem;
-    }
-}
 
-@media only screen and (min-width: 1024px) {
-    :root {
-        --font-size-h1:6.25vw;
-    }
-}
-
-@media only screen and (min-width: 1280px) {
-    :root {
-        --font-size-h2: 4.2rem;
-        --font-size-h3: 3.8rem;
-        --font-size-h4: 2.8rem;
-        --font-size-h5: 2.2rem;
-        --font-size-h6: 2.2rem;
-    }
-}
 
 html {
     -webkit-font-smoothing: antialiased;

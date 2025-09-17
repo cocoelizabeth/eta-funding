@@ -1,15 +1,14 @@
-import React, { useState } from 'react';
-import { Link } from 'gatsby';
-import { MdClose } from 'react-icons/md';
-import clsx from 'clsx';
-import HeaderStyles from '../styles/HeaderStyles';
-import { menu } from '../constants/menu';
-import Logo from './Logo';
-import ActionButton from './buttons/ActionButton';
-import Button from './buttons/Button';
+import React, { useState } from "react";
+import { Link } from "gatsby";
+import { MdClose } from "react-icons/md";
+import clsx from "clsx";
+import HeaderStyles from "../styles/HeaderStyles";
+import { menu } from "../constants/menu";
+import Logo from "./Logo";
+import ActionButton from "./buttons/ActionButton";
+import Button from "./buttons/Button";
 
 const Header = () => {
- 
   const [isNavOpen, setIsNavOpen] = useState(false);
   const handleNavItemClick = () => {
     if (isNavOpen) {
@@ -32,7 +31,7 @@ const Header = () => {
             ETA FUNDING <br />/ PARTNERS
           </Link>
         </div> */}
-{/* 
+        {/* 
 
         <div className="header__logo">
           <Logo />
@@ -41,11 +40,9 @@ const Header = () => {
           <Logo />
         </div> */}
 
-
-<div className="header__logo_svg">
+        <div className="header__logo_svg">
           <Logo />
         </div>
-
 
         <div className={clsx("nav__wrapper", isNavOpen && "open")}>
           <div className="mobileIcon">

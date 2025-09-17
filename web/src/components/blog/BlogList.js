@@ -14,8 +14,8 @@ function BlogList({ blogs }) {
             path={blog.slug.current}
             categories={blog.categories}
             image={{
-              imageData: blog.coverImage.asset.gatsbyImageData,
-              altText: blog.coverImage.alt,
+              imageData: blog.coverImage?.asset.gatsbyImageData,
+              altText: blog.coverImage?.alt,
             }}
             publishedAt={blog.publishedAt}
           />

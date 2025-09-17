@@ -13,7 +13,8 @@ const myPortableTextComponents = {
   block: {
     normal: ({ children }) => <ParagraphText>{children}</ParagraphText>,
     h1: ({ children }) => <Title>{children}</Title>,
-    h2: ({ children }) => <div className="h2">{children}</div>,
+    h2: ({ children }) => <h2 className="h2">{children}</h2>,
+    h3: ({ children }) => <h3 className="h3">{children}</h3>,
     li: ({ children }) => <li>{children}</li>,
     ol: ({ children }) => <ol className="custom-ordered-list">{children}</ol>,
   },

@@ -97,6 +97,7 @@ export const CriteriaListsStyles = styled.div`
         font-size: 5.3vw;
         width: 50%;
         width: 100%;
+
       }
     }
 
