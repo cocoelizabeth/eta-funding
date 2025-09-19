@@ -10,8 +10,7 @@ import textBlockCTA from './textBlockCTA.js';
 import content from './home/content.js';
 import hero from './home/hero.js';
 
-//ourProcess
-import steps from './ourProcess/steps.js';
+
 
 // whatWeLookFor
 import criteriaLists from './whatWeLookFor/criteriaLists.js';
@@ -29,7 +28,6 @@ export default [
     textBlockCTA, 
     content, 
     hero, 
-    steps, 
     criteriaLists, 
     reasons
 ];

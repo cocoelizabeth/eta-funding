@@ -36,13 +36,7 @@ export const SidebarList = definePlugin({
               .id('whoWeAre')
               .icon(MdPerson)
               .child(S.document().schemaType('whoWeAre').documentId('whoWeAre')),
-
-            S.listItem()
-              .title('Our Process')
-              .id('ourProcess')
-              .icon(MdTimeline)
-              .child(S.document().schemaType('ourProcess').documentId('ourProcess')),
-
+              
             S.listItem()
               .title('Blog')
               .child(
