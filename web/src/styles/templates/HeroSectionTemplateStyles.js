@@ -12,11 +12,9 @@ export const HeroSectionTemplateStyles = styled.div`
   .hero__wrapper .h2 {
     position: relative;
     padding-top: var(--page-intro-small);
-    /* text-transform: uppercase; */
   }
 
   .headlineText {
-    /* text-transform: uppercase; */
     width: 100%;
     font-size: 4rem;
   }

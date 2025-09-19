@@ -1,12 +1,9 @@
 import styled from "styled-components";
 
 export const ContentSectionStyles = styled.div`
-  background-color: var(--racoma-light);
-  color: var(--racoma-teal);
-
+  background-color: var(--racoma-teal);
+  color: var(--racoma-light);
   ${"" /* padding-bottom: calc(var(--page-intro-small) - 2rem); */}
-      /* padding-top: calc(2rem);
-    padding-bottom: calc(2rem); */
   width: 100%;
   h2,
   h5,
@@ -14,58 +11,9 @@ export const ContentSectionStyles = styled.div`
     text-transform: uppercase;
   }
 
-  .industry-partners-section {
-    background-color: var(--racoma-teal);
-    color: var(--racoma-light);
-  }
-  /* .managing-partner-section,
-  .industry-partners-section {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  .introContainer,
-  .capitalPartnersContainer {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-    @media only screen and (min-width: 720px) {
-      .managing-partner-section,
-      .industry-partners-section {
-        padding-top: calc(10.3rem - (var(--grid-gutter) * 3));
-        padding-bottom: calc(10.3rem - 4rem);
-      }
-    } */
-
-  .managing-partner-section {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-  }
-
-  .introContainer {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-  }
-
-    @media only screen and (min-width: 720px) {
-      .managing-partner-section {
-        padding-top: calc(10.3rem - (var(--grid-gutter) * 3));
-        padding-bottom: calc(10.3rem - 4rem);
-      }
-    }
-
-    .industry-partners-section {
-        padding-top: calc(var(--page-intro-small) * 2);
-        margin-bottom: calc(var(--page-intro-small) * 2);
-    }
-
-
-
   .introContainer {
     display: flex;
     flex-direction: column;
-    
     ${'' /* margin-top: var(--page-meta-bar); */}
 
     .headshotContainer {
@@ -106,12 +54,6 @@ export const ContentSectionStyles = styled.div`
         }
       }
     }
-
-      .about.body {
-            p:first-of-type {
-      margin-bottom: 5em;
-    }
-  }
   }
 
   .about.body {
@@ -123,9 +65,9 @@ export const ContentSectionStyles = styled.div`
       letter-spacing: -0.035em; */}
       padding-right: var(--grid-gutter)
     }
-    /* p:first-of-type {
+    p:first-of-type {
       margin-bottom: 5em;
-    } */
+    }
 
     p {
       strong:first-of-type {
@@ -167,7 +109,9 @@ export const ContentSectionStyles = styled.div`
   }
 
   .capitalPartnersContainer {
-
+    margin-top: var(--page-section);
+    padding-top: var(--page-meta-bar);
+    border-top: 1px solid var(--racoma-light);
     .sectionTitle {
       margin-bottom: 3.5rem;
     }
@@ -184,7 +128,9 @@ export const ContentSectionStyles = styled.div`
       );
     } */
     }
-
+    .capitalPartnersContainer {
+      padding-bottom: var(--page-section);
+    }
   }
 
   @media only screen and (min-width: 1024px) {

@@ -64,7 +64,7 @@ function ContentSection() {
 
   return (
     <ContentSectionStyles>
-      <section className="managing-partner-section">
+      <section>
         <div className="introContainer">
           <div className="headshotContainer">
             {/* <h2>{headshotImage.title}</h2> */}
@@ -101,9 +101,8 @@ function ContentSection() {
             </div>
           </div>
         </div>
-        </section>
-        <section className="industry-partners-section">
-                        <div className="capitalPartnersContainer">
+        
+        <div className="capitalPartnersContainer">
           <div className="sectionTitle">
             <h2><MyPortableText className="criteraList" value={capitalPartners.title} /></h2>
           </div>
@@ -113,8 +112,6 @@ function ContentSection() {
             </div>
           </div>
         </div>
-        </section>
-
 
         {/* <h1>{content.capitalPartners.headerText}</h1> */}
 
@@ -136,7 +133,7 @@ function ContentSection() {
             <MyPortableText value={content.list3._rawSubText} />
           </div>
         </div> */}
-    
+      </section>
     </ContentSectionStyles>
   );
 }
