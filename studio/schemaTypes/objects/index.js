@@ -5,8 +5,6 @@ import normalText from './normalText.js';
 import customSEO from './customSEO.js';
 import textBlockCTA from './textBlockCTA.js';
 
-// childcare
-import criteriaListsWithTitle from './childCare/criteriaListsWithTitle.js';
 
 // home
 import content from './home/content.js';
@@ -29,7 +27,6 @@ export default [
     normalText, 
     customSEO, 
     textBlockCTA, 
-    criteriaListsWithTitle, 
     content, 
     hero, 
     steps, 

@@ -1,5 +1,5 @@
 import {structureTool} from 'sanity/structure'
-import { MdStar, MdHome, MdPerson, MdTimeline, MdChildCare } from 'react-icons/md';
+import { MdStar, MdHome, MdPerson, MdTimeline } from 'react-icons/md';
 import { BsFillQuestionCircleFill } from 'react-icons/bs';
 import { GrSearch } from 'react-icons/gr';
 import { definePlugin } from 'sanity';
@@ -24,12 +24,6 @@ export const SidebarList = definePlugin({
               .id('whatWeLookFor')
               .icon(GrSearch)
               .child(S.document().schemaType('whatWeLookFor').documentId('whatWeLookFor')),
-
-            S.listItem()
-              .title('Child Care')
-              .id('childCare')
-              .icon(MdChildCare)
-              .child(S.document().schemaType('childCare').documentId('childCare')),
 
             S.listItem()
               .title('Investment Strategy')
