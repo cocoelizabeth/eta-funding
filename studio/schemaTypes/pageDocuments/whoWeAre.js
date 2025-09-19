@@ -14,6 +14,12 @@ export default defineType({
       type: 'customSEO',
     }),
     defineField({
+      title: 'Hero Section',
+      name: 'hero',
+      type: 'textBlock',
+      description: 'First section on page with heading & paragraph text',
+    }),
+    defineField({
       title: 'Headshot Image',
       name: 'headshotImage',
       type: 'customImage',
