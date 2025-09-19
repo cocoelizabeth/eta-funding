@@ -2,8 +2,8 @@ import { defineType, defineField } from 'sanity';
 import { FaListOl } from "react-icons/fa6";
 
 export default defineType({
-  title: 'Why Us',
-  name: 'whyUs',
+  title: 'Investment Strategy',
+  name: 'investmentStrategy',
   type: 'document',
   icon: FaListOl,
   fields: [

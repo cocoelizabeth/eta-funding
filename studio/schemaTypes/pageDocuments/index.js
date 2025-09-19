@@ -4,14 +4,14 @@ import ourProcess from './ourProcess.js';
 import whatWeLookFor from './whatWeLookFor.js';
 import whoWeAre from './whoWeAre.js';
 import managedFund from './managedFund.js';
-import whyUs from './whyUs'
+import investmentStrategy from './investmentStrategy.js'
 
 export default [
     home, 
 
     whatWeLookFor,
     managedFund,
-    whyUs, 
+    investmentStrategy, 
     whoWeAre, 
     
     childCare, // delete later

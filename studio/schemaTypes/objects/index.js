@@ -18,8 +18,8 @@ import steps from './ourProcess/steps.js';
 // whatWeLookFor
 import criteriaLists from './whatWeLookFor/criteriaLists.js';
 
-// whyUs
-import reasons from './whyUs/reasons.js';
+// investmentStrategy
+import reasons from './investmentStrategy/reasons.js';
 
 
 export default [
