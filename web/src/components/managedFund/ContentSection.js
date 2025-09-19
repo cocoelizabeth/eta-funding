@@ -1,9 +1,9 @@
-import { graphql, useStaticQuery, Link } from 'gatsby';
-import React from 'react';
-import { ContentSectionStyles } from '../../styles/whyUs/ContentSectionStyles';
-import MyPortableText from '../MyPortableText';
-import Button from '../buttons/Button';
-import TextBlockCTAItem from './TextBlockCTAItem';
+import { graphql, useStaticQuery, Link } from "gatsby";
+import React from "react";
+import { ContentSectionStyles } from "../../styles/investmentStrategy/ContentSectionStyles";
+import MyPortableText from "../MyPortableText";
+import Button from "../buttons/Button";
+import TextBlockCTAItem from "./TextBlockCTAItem";
 
 function ContentSection() {
   const data = useStaticQuery(graphql`
@@ -44,9 +44,8 @@ function ContentSection() {
     content.reason3,
     content.reason4,
   ];
-  
+
   const contentBlockItems = contentBlocks.map((item) => (
-    
     <TextBlockCTAItem
       headerText={item._rawHeadlineTextCustom}
       _rawSubText={item._rawSubText}
@@ -68,7 +67,7 @@ function ContentSection() {
         <div className="contentSection__grid_row">
           <p className="contentSection_smallHeading">
             <strong>
-            <MyPortableText value={content.reason1._rawHeadlineTextCustom}/>
+              <MyPortableText value={content.reason1._rawHeadlineTextCustom} />
             </strong>
           </p>
           <MyPortableText value={content.reason1._rawSubText} />
@@ -76,29 +75,27 @@ function ContentSection() {
 
           <p className="contentSection_smallHeading">
             <strong>
-            <MyPortableText value={content.reason2._rawHeadlineTextCustom}/>
+              <MyPortableText value={content.reason2._rawHeadlineTextCustom} />
             </strong>
           </p>
           <MyPortableText value={content.reason2._rawSubText} />
-         
         </div>
         <div className="contentSection__grid_row">
           <p className="contentSection_smallHeading">
             <strong>
-            <MyPortableText value={content.reason3._rawHeadlineTextCustom}/>
+              <MyPortableText value={content.reason3._rawHeadlineTextCustom} />
             </strong>
           </p>
           <MyPortableText value={content.reason3._rawSubText} />
-        
+
           {/* BLOCK 2 */}
 
           <p className="contentSection_smallHeading">
             <strong>
-              <MyPortableText value={content.reason4._rawHeadlineTextCustom}/>
+              <MyPortableText value={content.reason4._rawHeadlineTextCustom} />
             </strong>
           </p>
           <MyPortableText value={content.reason4._rawSubText} />
-
         </div>
         {/* <BlogGrid blogs={featuredBlogs} /> */}
       </section>
@@ -242,4 +239,3 @@ export default ContentSection;
 // }
 
 // export default ContentSection;
-

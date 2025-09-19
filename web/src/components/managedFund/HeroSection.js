@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link, graphql, useStaticQuery } from 'gatsby';
-import { HeroSectionStyles } from '../../styles/whyUs/HeroSectionStyles';
-import HeroSectionTemplate from '../templates/HeroSectionTemplate'
+import React from "react";
+import { Link, graphql, useStaticQuery } from "gatsby";
+import { HeroSectionStyles } from "../../styles/investmentStrategy/HeroSectionStyles";
+import HeroSectionTemplate from "../templates/HeroSectionTemplate";
 function HeroSection() {
   const data = useStaticQuery(graphql`
     {

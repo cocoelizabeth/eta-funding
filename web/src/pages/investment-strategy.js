@@ -1,9 +1,10 @@
 import React from "react";
-import HeroSection from "../components/whyUs/HeroSection";
+import HeroSection from "../components/investmentStrategy/HeroSection";
 import { SEO } from "../components/SEO";
-import ContentSection from "../components/whyUs/ContentSection";
-import ComparisonTable from "../components/whyUs/ComparisonTable";
-const WhyUsPage = () => (
+import ContentSection from "../components/investmentStrategy/ContentSection";
+import ComparisonTable from "../components/investmentStrategy/ComparisonTable";
+
+const investmentStrategyPage = () => (
   <>
     <SEO title="Investment Strategy | ETA FUNDING" />
     <HeroSection />
@@ -14,6 +15,6 @@ const WhyUsPage = () => (
   </>
 );
 
-export default WhyUsPage;
+export default investmentStrategyPage;
 
 export const Head = () => <SEO title="Investment Strategy | ETA FUNDING" />;

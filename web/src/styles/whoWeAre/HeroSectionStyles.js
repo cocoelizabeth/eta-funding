@@ -15,14 +15,12 @@ export const HeroSectionStyles = styled.div`
   .hero__wrapper .h2 {
     position: relative;
     padding-top: var(--page-intro-small);
-    text-transform: uppercase;
     ${"" /* padding-bottom: var(--page-intro-small); */}
     padding-bottom: var(--page-intro-small);
     border-bottom: 1px solid var(--racoma-light);
   }
 
   .headlineText {
-    text-transform: uppercase;
     width: 100%;
     font-size: 4rem;
   }

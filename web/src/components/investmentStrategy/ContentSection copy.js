@@ -1,14 +1,15 @@
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import React from 'react';
-import { ContentSectionStyles } from '../../styles/whyUs/ContentSectionStyles';
+import { ContentSectionStyles } from '../../styles/investmentStrategy/ContentSectionStyles';
 import MyPortableText from '../MyPortableText';
 import Button from '../buttons/Button';
 import TextBlockCTAItem from './TextBlockCTAItem';
 
+
 function ContentSection() {
   const data = useStaticQuery(graphql`
     {
-      allSanityWhyUs {
+      allSanityInvestmentStrategy {
         nodes {
           contentSection {
           _rawIntroText
@@ -38,7 +39,7 @@ function ContentSection() {
     }
   `);
 
-  const content = data.allSanityWhyUs.nodes[0].contentSection;
+  const content = data.allSanityInvestmentStrategy.nodes[0].contentSection;
   const contentBlocks = [
     content.reason1,
     content.reason2,

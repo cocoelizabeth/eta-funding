@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link, graphql, useStaticQuery } from 'gatsby';
-import { HeroSectionStyles } from '../../styles/whyUs/HeroSectionStyles';
-import HeroSectionTemplate from '../templates/HeroSectionTemplate'
+import React from "react";
+import { Link, graphql, useStaticQuery } from "gatsby";
+import { HeroSectionStyles } from "../../styles/investmentStrategy/HeroSectionStyles";
+import HeroSectionTemplate from "../templates/HeroSectionTemplate";
 function HeroSection() {
   const data = useStaticQuery(graphql`
     {
-      allSanityWhyUs {
+      allSanityInvestmentStrategy {
         nodes {
           hero {
             _rawHeadlineTextCustom
@@ -16,7 +16,7 @@ function HeroSection() {
     }
   `);
 
-  const { hero } = data.allSanityWhyUs.nodes[0];
+  const { hero } = data.allSanityInvestmentStrategy.nodes[0];
 
   return (
     <HeroSectionTemplate

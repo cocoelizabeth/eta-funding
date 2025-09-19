@@ -11,7 +11,7 @@ module.exports = {
     title: `ETA Funding`,
     siteUrl: `https://etafunding.com`,
     description: `Entrepreneurship Through Acquisition - Funding Partners`,
-    image:  '/favicon-32x32.png'
+    image:  '/favicon-color-96x96.png'
   },
   plugins: [
   {
@@ -29,7 +29,7 @@ module.exports = {
   {
     resolve: 'gatsby-plugin-manifest',
     options: {
-      "icon": "src/images/icon-512x512.png"
+      "icon": "src/images/favicon-color-96x96.png"
     }
   }, 
   "gatsby-plugin-mdx", 

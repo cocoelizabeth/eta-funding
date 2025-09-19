@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { Link, graphql, useStaticQuery } from "gatsby";
-import { ComparisonTableStyles } from "../../styles/whyUs/ComparisonTableStyles";
+import { ComparisonTableStyles } from "../../styles/investmentStrategy/ComparisonTableStyles";
 import MyPortableText from "../MyPortableText";
 import Button from "../buttons/Button";
 
