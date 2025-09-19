@@ -5,7 +5,6 @@ import investmentStrategy from './investmentStrategy.js'
 
 export default [
     home, 
-
     whatWeLookFor,
     investmentStrategy, 
     whoWeAre, 

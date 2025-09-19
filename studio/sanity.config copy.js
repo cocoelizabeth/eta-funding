@@ -1,6 +1,5 @@
 import {defineConfig} from 'sanity'
 import {structureTool} from 'sanity/structure'
-import deskStructure from './deskStructure'
 import {visionTool} from '@sanity/vision'
 import schemaTypes from './schemaTypes/schema' 
 // import customNavbar from './components/customNavbar' // FIXED IMPORT PATH
@@ -20,9 +19,7 @@ export default defineConfig({
   },
 
   plugins: [
-    structureTool({
-      structure: (S, context) => deskStructure(S, context),
-    }),
+    structureTool(),
     visionTool()
   ],
 
