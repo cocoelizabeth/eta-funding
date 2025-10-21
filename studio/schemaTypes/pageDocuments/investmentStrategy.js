@@ -8,6 +8,11 @@ export default defineType({
   icon: FaListOl,
   fields: [
     defineField({
+      title: 'SEO',
+      name: 'seo',
+      type: 'customSEO',
+    }),
+    defineField({
       title: 'Hero Section',
       name: 'hero',
       type: 'textBlock',

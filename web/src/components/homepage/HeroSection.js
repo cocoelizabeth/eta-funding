@@ -15,6 +15,7 @@ function HeroSection() {
             cta
             link
           }
+          seo
         }
       }
     }

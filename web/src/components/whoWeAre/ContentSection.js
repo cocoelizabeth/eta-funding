@@ -27,11 +27,11 @@ function ContentSection() {
             _rawHeadlineTextCustom
           }
           seo {
-            title
+            metaTitle
             slug {
               current
             }
-            description
+            metaDescription
           }
           capitalPartners {
             _rawHeadlineTextCustom

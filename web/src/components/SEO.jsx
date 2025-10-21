@@ -2,6 +2,7 @@ import React from "react"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 
 export const SEO = ({ title, description, pathname, children }) => {
+  debugger
   const { title: defaultTitle, description: defaultDescription, image, siteUrl } = useSiteMetadata()
 
   const seo = {
@@ -10,6 +11,8 @@ export const SEO = ({ title, description, pathname, children }) => {
     image: `${siteUrl}${image}`,
     url: `${siteUrl}${pathname || ``}`,
   }
+
+  debugger
 
   return (
     <>

@@ -1,9 +1,10 @@
 import { FaStar } from 'react-icons/fa';
 import { defineType, defineField } from 'sanity';
+import customSEO from '../objects/customSEO';
 
 export default defineType({
   name: 'featured',
-  title: 'Featured',
+  title: 'Featured Blogs',
   type: 'document',
   icon: FaStar,
   fields: [
@@ -39,6 +40,11 @@ export default defineType({
       validation: (Rule) =>
         Rule.unique().error('Every item should be unique.')
           .required().error('At least one item is required'),
+    }),
+    defineField({
+      title: 'SEO',
+      name: 'seo',
+      type: 'customSEO',
     }),
   ],
 });

@@ -7,11 +7,17 @@ export default defineType({
   name: 'blog',
   type: 'document',
   icon: FaPenToSquare,
+
+  fieldsets: [
+    { name: 'advancedSeoSettings', title: 'Advanced SEO Settings', options: { collapsible: true, collapsed: true } },
+  ],
+
   fields: [
     defineField({
       title: 'Title',
       name: 'title',
       type: 'string',
+      description: 'Shown in search results. Aim for 50–60 characters.',
     }),
     defineField({
       title: 'Slug',
@@ -60,6 +66,61 @@ export default defineType({
       name: 'body',
       type: 'richText', // Ensure 'richText' exists
     }),
+
+    // ADVANCED SEO SETTINGS
+    defineField({
+      name: 'metaTitle',
+      title: 'Meta Title',
+      type: 'string',
+      description: 'Defaults to blog title if not set.',
+      fieldset: 'advancedSeoSettings',
+    }),
+    defineField({
+      name: 'metaDescription',
+      title: 'Meta Description',
+      type: 'text',
+      rows: 3,
+      description: 'Defaults to Excerpt if not set. 155-160 characters recommended.',
+      fieldset: 'advancedSeoSettings',
+    }),
+    defineField({
+      name: 'canonicalUrl',
+      title: 'Canonical Url',
+      type: 'string',
+      description: 'Leave blank to auto-generate. Only set if this page duplicates another.',
+      fieldset: 'advancedSeoSettings',
+    }),
+    defineField({
+      name: 'schemaType',
+      title: 'Schema Type',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Web Page', value: 'WebPage' },
+          { title: 'Article', value: 'Article' },
+          { title: 'Organization', value: 'Organization' },
+        ],
+      },
+      initialValue: 'Article',
+      description: 'Controls JSON-LD schema markup.',
+      fieldset: 'advancedSeoSettings',
+    }),
+    defineField({
+      name: 'jsonLd',
+      title: 'Custom JSON-LD',
+      type: 'text',
+      description: 'Paste raw JSON-LD schema here (advanced use).',
+      fieldset: 'advancedSeoSettings',
+    }),
+    defineField({
+      name: 'noindex',
+      title: 'No index?',
+      type: 'boolean',
+      description: 'Only turn on if you do not want search engines to index this page.',
+      initialValue: false,
+      fieldset: 'advancedSeoSettings',
+    }),
+
   ],
   preview: {
     select: {

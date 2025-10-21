@@ -14,6 +14,8 @@ const deskStructure = (S /*, context */) =>
               S.documentTypeListItem('whatWeLookFor').title('What We Look For'),
               S.documentTypeListItem('investmentStrategy').title('Investment Strategy'),
               S.documentTypeListItem('whoWeAre').title('Who We Are'),
+              S.documentTypeListItem('featured').title('Blog'),
+
             ])
         ),
 
@@ -27,7 +29,6 @@ const deskStructure = (S /*, context */) =>
               S.documentTypeListItem('blog').title('Blog Posts'),
               S.documentTypeListItem('author').title('Authors'),
               S.documentTypeListItem('category').title('Categories'),
-              S.documentTypeListItem('featured').title('Featured'),
             ])
         ),
     ])
