@@ -11,7 +11,7 @@ module.exports = {
     title: `ETA Funding`,
     siteUrl: `https://etafunding.com`,
     description: `Entrepreneurship Through Acquisition - Funding Partners`,
-    image:  '/favicon-color-96x96.png'
+    image:  '/eta-funding-og-image-light_1200x630.jpg'
   },
   plugins: [
   {

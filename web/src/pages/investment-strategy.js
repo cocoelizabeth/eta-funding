@@ -1,4 +1,5 @@
 import React from "react";
+import { graphql } from "gatsby";
 import HeroSection from "../components/investmentStrategy/HeroSection";
 import { SEO } from "../components/SEO";
 import ContentSection from "../components/investmentStrategy/ContentSection";
@@ -6,7 +7,6 @@ import ComparisonTable from "../components/investmentStrategy/ComparisonTable";
 
 const investmentStrategyPage = () => (
   <>
-    <SEO title="Investment Strategy | ETA FUNDING" />
     <HeroSection />
     <ContentSection />
     {/* <ComparisonTable /> */}
@@ -17,4 +17,12 @@ const investmentStrategyPage = () => (
 
 export default investmentStrategyPage;
 
-export const Head = () => <SEO title="Investment Strategy | ETA FUNDING" />;
+export const query = graphql`
+  query InvestmentStrategyPageQuery {
+    sanityInvestmentStrategy { seo { ...SeoFields } }
+  }
+`;
+
+export const Head = ({ data, location }) => (
+  <SEO seo={data?.sanityInvestmentStrategy?.seo} pathname={location.pathname} />
+);

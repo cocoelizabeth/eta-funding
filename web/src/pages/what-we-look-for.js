@@ -1,11 +1,12 @@
 import React from "react";
+import { graphql } from "gatsby";
 import HeroSection from "../components/whatWeLookFor/HeroSection";
 import { SEO } from "../components/SEO";
 import CriteriaLists from "../components/whatWeLookFor/CriteriaLists";
 
+
 const WhatWeLookForPage = () => (
   <>
-    <SEO title="What We Look For | ETA FUNDING" />
     <HeroSection />
     <CriteriaLists />
   </>
@@ -13,4 +14,12 @@ const WhatWeLookForPage = () => (
 
 export default WhatWeLookForPage;
 
-export const Head = () => <SEO title="What We Look For | ETA FUNDING" />;
+export const query = graphql`
+  query WhatWeLookForPageQuery {
+    sanityWhatWeLookFor { seo { ...SeoFields } }
+  }
+`;
+
+export const Head = ({ data, location }) => (
+  <SEO seo={data?.sanityWhatWeLookFor?.seo} pathname={location.pathname} />
+);

@@ -1,74 +1,101 @@
-import React from "react"
-import { useSiteMetadata } from "../hooks/use-site-metadata"
+import React from "react";
+import { useSiteMetadata } from "../hooks/use-site-metadata";
 
-export const SEO = ({ title, description, pathname, children }) => {
+export const SEO = ({
+  seo = {},
+  pathname = "",
+  //allow ad-hoc overrides if needed
+  canonicalUrl,
+  noindex,
+  children,
+}) => {
+  const {
+    title: siteTitle,
+    description: siteDescription,
+    image: siteImage,
+    siteUrl,
+  } = useSiteMetadata(); // uses defaults from gatsby-config
+
+  const resolved = {
+    title: seo.metaTitle || siteTitle,
+    description: seo.metaDescription || siteDescription,
+    ogTitle: seo.ogTitle || seo.metaTitle || siteTitle,
+    ogDescription: seo.ogDescription || seo.metaDescription || siteDescription,
+    image:
+      seo?.ogImage?.asset?.url ||
+      (siteUrl && siteImage ? `${siteUrl}${siteImage}` : undefined),
+    url:
+      seo.canonicalUrl ||
+      canonicalUrl ||
+      (siteUrl ? `${siteUrl}${pathname || ""}` : undefined),
+    noindex: typeof noindex === "boolean" ? noindex : !!seo.noindex,
+    jsonLd: seo.jsonLd, // allow raw JSON-LD string from Sanity (optional)
+  };
+
   
-  const { title: defaultTitle, description: defaultDescription, image, siteUrl } = useSiteMetadata()
-
-  const seo = {
-    title: title || defaultTitle,
-    description: description || defaultDescription,
-    image: `${siteUrl}${image}`,
-    url: `${siteUrl}${pathname || ``}`,
-  }
-
-  
-
   return (
     <>
-      <title>{seo.title}</title>
-      <meta name="description" content={seo.description} />
-      <meta name="image" content={seo.image} />
-      {/* <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>👤</text></svg>" /> */}
+      {/* Basic */}
+      <title> {resolved.title} </title>
+      {resolved.description && (
+        <meta name="description" content={resolved.description} />
+      )}
+
+      {/* Canonical */}
+      {resolved.url && <link rel="canonical" href={resolved.url} />}
+
+      {/* Robots */}
+      {resolved.noindex && <meta name="robots" content="noindex, nofollow" />}
+
+      {/* Open Graph */}
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={resolved.ogTitle} />
+      {resolved.ogDescription && (
+        <meta property="og:description" content={resolved.ogDescription} />
+      )}
+      {resolved.url && <meta property="og:url" content={resolved.url} />}
+      {resolved.image && <meta property="og:image" content={resolved.image} />}
+
+      {/* Twitter (summary_large_image by default) */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={resolved.ogTitle} />
+      {resolved.ogDescription && (
+        <meta name="twitter:description" content={resolved.ogDescription} />
+      )}
+      {resolved.image && <meta name="twitter:image" content={resolved.image} />}
+
+      {/* Optional JSON-LD (string) */}
+      {resolved.jsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: resolved.jsonLd }}
+        />
+      )}
+
       {children}
     </>
-  )
-}
-// function SEO({ title, description }) {
-//   const { site } = useStaticQuery(graphql`
-//     {
-//       site {
-//         siteMetadata {
-//           description
-//           title
-//         }
-//       }
-//     }
-//   `);
+  );
+};
+
+// export const SEO = ({ title, description, pathname, children }) => {
+
+//   const { title: defaultTitle, description: defaultDescription, image, siteUrl } = useSiteMetadata()
 
 //   const seo = {
-//     title: title
-//       ? `${title} - ${site.siteMetadata.title}`
-//       : site.siteMetadata.title,
-//     description: description || site.siteMetadata.description,
-//   };
+//     title: title || defaultTitle,
+//     description: description || defaultDescription,
+//     image: `${siteUrl}${image}`,
+//     url: `${siteUrl}${pathname || ``}`,
+//   }
+
+//   debugger
+
 //   return (
-//     <Helmet>
+//     <>
 //       <title>{seo.title}</title>
 //       <meta name="description" content={seo.description} />
-//       <link
-//         rel="apple-touch-icon"
-//         sizes="180x180"
-//         href="/apple-touch-icon.png"
-//       />
-//       <link
-//         rel="icon"
-//         type="image/png"
-//         sizes="32x32"
-//         href="/favicon-32x32.png"
-//       />
-//       <link
-//         rel="icon"
-//         type="image/png"
-//         sizes="16x16"
-//         href="/favicon-16x16.png"
-//       />
-//       <link rel="manifest" href="/site.webmanifest" />
-//       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#648480" />
-//       <meta name="msapplication-TileColor" content="#648480" />
-//       <meta name="theme-color" content="#ffffff" />
-//     </Helmet>
-//   );
+//       <meta name="image" content={seo.image} />
+//       {children}
+//     </>
+//   )
 // }
-
-// export default SEO;

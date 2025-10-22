@@ -1,3 +1,5 @@
+// Shared SEO GraphQL fragment for main pages that mirrors studio/schemaTypes/objects/customSEO.js
+
 import { graphql } from "gatsby";
 
 export const query = graphql`
@@ -21,4 +23,4 @@ export const query = graphql`
 `;
 
 
-//
+// TO-DO***: IMPORT slug

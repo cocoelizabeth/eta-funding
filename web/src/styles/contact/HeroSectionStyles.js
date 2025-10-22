@@ -3,12 +3,7 @@ import styled from 'styled-components';
 
 export const HeroSectionStyles = styled.div`
   margin-top: 0;
-  ${
-    "" /* 
-  height: 100%;
-  min-height: calc(100vh - var(--header-height));
-  width: 100%; */
-  }
+
 
   .hero__wrapper {
     position: relative;
@@ -16,29 +11,22 @@ export const HeroSectionStyles = styled.div`
     margin-top: 0;
     padding-bottom: var(--page-section);
 
-    ${
-      "" /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
-    }
-
-    ${"" /* margin-bottom: var(--page-section); */}
   }
-  .hero__wrapper .h2 {
+  .hero__wrapper .h2,
+  .hero__wrapper h2 {
     position: relative;
     padding-top: var(--page-intro-small);
     text-transform: uppercase;
   }
 
-  .headlineText {
+  .headlineText,
+  h2 {
     text-transform: uppercase;
     width: 100%;
     font-size: 4rem;
-    ${
-      "" /* 
-    font-size: 3.2rem !important; */
-    }
   }
+
+
 
   .subheadingText {
     display: block;
@@ -100,7 +88,7 @@ export const HeroSectionStyles = styled.div`
       min-height: 100vh; */
       }
     }
-    .headlineText {
+    h2, .headlineText {
       padding-bottom: 1em;
       font-size: 5.3vw;
       width: 50%;

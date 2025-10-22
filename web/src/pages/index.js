@@ -20,23 +20,7 @@ export default IndexPage;
 export const query = graphql`
   query HomePageQuery {
     sanityHome {
-      seo {
-        metaTitle
-        metaDescription
-        ogTitle
-        ogDescription
-        canonicalUrl
-        schemaType
-        noindex
-        jsonLd
-        ogImage {
-          alt
-          asset {
-            url
-          }
-        }
-      }
-      # anything else you want for content…
+      seo { ...SeoFields }
       hero {
         _rawHeadlineTextCustom
         _rawSubHeadlineText
@@ -54,4 +38,8 @@ export const query = graphql`
   }
 `;
 
-export const Head = () => <SEO title="Home | ETA FUNDING" />;
+
+export const Head = ({ data, location }) => (
+  <SEO seo={data?.sanityHome?.seo} pathname={location.pathname} />
+);
+
