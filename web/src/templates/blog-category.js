@@ -64,7 +64,7 @@ query BlogsByCategory($id: String!) {
 
   allSanityBlog(
     filter: { categories: { elemMatch: { id: { eq: $id } } } }
-    sort: { fields: publishedAt, order: DESC }
+    sort: { publishedAt: DESC }
   ) {
 
       nodes {
