@@ -14,6 +14,7 @@ const deskStructure = (S /*, context */) =>
               S.documentTypeListItem('whatWeLookFor').title('What We Look For'),
               S.documentTypeListItem('investmentStrategy').title('Investment Strategy'),
               S.documentTypeListItem('whoWeAre').title('Who We Are'),
+              S.documentTypeListItem('contact').title('Contact Us'),
               S.documentTypeListItem('featured').title('Blog'),
 
             ])

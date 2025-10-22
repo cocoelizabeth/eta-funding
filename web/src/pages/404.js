@@ -4,7 +4,7 @@ import PageSpace from '../components/PageSpace';
 import { NotFoundPageStyles } from '../styles/NotFoundPageStyles';
 import { SectionTitle } from '../components/typography/Title';
 import ParagraphText from '../components/typography/ParagraphText';
-
+import { SEO } from '../components/SEO';
 function NotFoundPage() {
   return (
     <PageSpace>
@@ -26,3 +26,7 @@ function NotFoundPage() {
 }
 
 export default NotFoundPage;
+
+export const Head = ({ location }) => (
+  <SEO title="Page Not Found | ETA Funding Partners" pathname={location.pathname} noindex />
+);

@@ -4,6 +4,7 @@ import { useSiteMetadata } from "../hooks/use-site-metadata";
 export const SEO = ({
   seo = {},
   pathname = "",
+  title,
   //allow ad-hoc overrides if needed
   canonicalUrl,
   noindex,
@@ -17,7 +18,7 @@ export const SEO = ({
   } = useSiteMetadata(); // uses defaults from gatsby-config
 
   const resolved = {
-    title: seo.metaTitle || siteTitle,
+    title: title || seo.metaTitle || siteTitle,
     description: seo.metaDescription || siteDescription,
     ogTitle: seo.ogTitle || seo.metaTitle || siteTitle,
     ogDescription: seo.ogDescription || seo.metaDescription || siteDescription,
