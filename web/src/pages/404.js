@@ -28,5 +28,5 @@ function NotFoundPage() {
 export default NotFoundPage;
 
 export const Head = ({ location }) => (
-  <SEO title="Page Not Found | ETA Funding Partners" pathname={location.pathname} noindex />
+  <SEO title="Page Not Found | ETA FUNDING" pathname={location.pathname} noindex />
 );
