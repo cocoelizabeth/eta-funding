@@ -15,12 +15,13 @@ function HeroSection() {
             cta
             link
           }
-          seo
+          seo { ...SeoFields }
         }
       }
     }
   `);
 
+  debugger
 const hero = data?.allSanityHome?.nodes?.[0]?.hero ?? {}; // Add fallback to prevent error
 
 
