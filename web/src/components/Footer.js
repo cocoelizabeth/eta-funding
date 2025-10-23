@@ -1,11 +1,14 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import { FooterStyles } from '../styles/FooterStyles';
 import Logo from './Logo';
 import { socialLinks } from '../constants/socialLinks';
-import Button from './buttons/Button';
 import ParagraphText from './typography/ParagraphText'
-import { menu } from '../constants/menu';
+
+
+// Potentially Add Later
+// import { Link } from 'gatsby';
+// import Button from './buttons/Button';
+// import { menu } from '../constants/menu';
 
 function Footer() {
   return (
