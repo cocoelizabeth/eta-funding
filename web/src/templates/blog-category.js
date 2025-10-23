@@ -1,13 +1,11 @@
 import React from "react";
 
-import { BlogListStyles } from "../styles/blog/BlogListStyles";
-import BlogListItem from "../components/blog/BlogListItem";
 import { graphql } from "gatsby";
 import { FeaturedBlogsStyles } from "../styles/homePage/FeaturedBlogsStyles";
 import BlogList from "../components/blog/BlogList";
 import MyPortableText from "../components/MyPortableText";
 import { Link } from "gatsby";
-import { SEO } from '../components/SEO';
+import { SEO } from "../components/SEO";
 
 export const blogsByCategoryQuery = graphql`
   query BlogsByCategory($id: String!) {
@@ -78,7 +76,6 @@ function BlogCategory({ data }) {
   const categoryTitle = category?.title ?? "Articles & Resources";
   const categoryDescriptionBlocks = category?._rawDescription;
 
-
   return (
     <FeaturedBlogsStyles>
       <section>
@@ -94,11 +91,12 @@ function BlogCategory({ data }) {
         <h1>{categoryTitle}</h1>
 
         {/* Render PortableText only if blocks exist */}
-        {Array.isArray(categoryDescriptionBlocks) && categoryDescriptionBlocks.length > 0 && (
-          <div className="featuredBlogs__text">
-            <MyPortableText value={categoryDescriptionBlocks} />
-          </div>
-        )}
+        {Array.isArray(categoryDescriptionBlocks) &&
+          categoryDescriptionBlocks.length > 0 && (
+            <div className="featuredBlogs__text">
+              <MyPortableText value={categoryDescriptionBlocks} />
+            </div>
+          )}
 
         <BlogList blogs={blogs} />
       </section>
@@ -106,7 +104,7 @@ function BlogCategory({ data }) {
   );
 }
 
-export const Head = ({data, location}) => {
+export const Head = ({ data, location }) => {
   const category = data?.allSanityCategory?.nodes?.[0];
 
   const flattenRawText = (blocks) => {
@@ -121,14 +119,18 @@ export const Head = ({data, location}) => {
       .trim();
   };
 
-  const defaultCategoryPageTitle = 
-     (category?.title ? `${category.title} | Articles & Resources | ETA FUNDING` : "Articles & Resources | ETA FUNDING");
+  const defaultCategoryPageTitle = category?.title
+    ? `${category.title} | Articles & Resources | ETA FUNDING`
+    : "Articles & Resources | ETA FUNDING";
 
-  const fallbackDescription = ptToPlain(category?._rawDescription);
+  const fallbackDescription = flattenRawText(category?._rawDescription);
 
   const seo = {
     metaTitle: category?.metaTitle || defaultCategoryPageTitle,
-    metaDescription: category?.metaDescription || fallbackDescription || "Articles and resources from ETA Funding.",
+    metaDescription:
+      category?.metaDescription ||
+      fallbackDescription ||
+      "Articles and resources from ETA Funding.",
     ogImage: category?.coverImage,
     canonicalUrl: category?.canonicalUrl,
     noindex: category?.noindex,
@@ -137,7 +139,6 @@ export const Head = ({data, location}) => {
   };
 
   return <SEO seo={seo} pathname={location.pathname} />;
-    
-}
+};
 
 export default BlogCategory;

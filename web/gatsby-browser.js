@@ -23,7 +23,7 @@ export const wrapPageElement = ({ element, props }) => (
 //   routerProps: { location },
 //   getSavedScrollPosition,
 // }) => {
-//   //  debugger;
+//  
 //    window.scrollTo(0, 0);
 //   const { pathname } = location
 //   // list of routes for the scroll-to-top-hook
