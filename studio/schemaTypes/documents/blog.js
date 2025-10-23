@@ -18,6 +18,7 @@ export default defineType({
       name: 'title',
       type: 'string',
       description: 'Shown in search results. Aim for 50–60 characters.',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       title: 'Slug',
@@ -32,12 +33,14 @@ export default defineType({
       title: 'Published At',
       name: 'publishedAt',
       type: 'datetime',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       title: 'Author',
       name: 'author',
       type: 'reference',
       to: [{ type: 'author' }],
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       title: 'Categories',
@@ -60,11 +63,13 @@ export default defineType({
       name: 'excerpt',
       type: 'normalText', // Ensure 'normalText' exists
       description: 'A short description about the blog post',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       title: 'Blog Body',
       name: 'body',
       type: 'richText', // Ensure 'richText' exists
+      validation: (Rule) => Rule.required(),
     }),
 
     // ADVANCED SEO SETTINGS
@@ -102,7 +107,7 @@ export default defineType({
         ],
       },
       initialValue: 'Article',
-      description: 'Controls JSON-LD schema markup.',
+      description: 'Controls JSON-LD schema markup. Default for Blog Post pages is "Article."',
       fieldset: 'advancedSeoSettings',
     }),
     defineField({
