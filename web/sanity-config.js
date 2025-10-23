@@ -2,7 +2,7 @@
 //   projectId: process.env.GATSBY_SANITY_PROJECT_ID,
 //   dataset: process.env.GATSBY_SANITY_DATASET,
 // };
-const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.NODE_ENV === 'production' || false;
 
 
 module.exports = {
