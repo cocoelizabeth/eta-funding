@@ -5,9 +5,7 @@ import { format } from 'date-fns';
 import { FiCalendar, FiUser } from 'react-icons/fi';
 import { BiCategory } from 'react-icons/bi';
 import { SingleBlogStyles } from '../styles/blog/SingleBlogStyles';
-import { Title } from '../components/typography/Title';
 import { SEO } from '../components/SEO';
-import PageSpace from '../components/PageSpace';
 import MyPortableText from '../components/MyPortableText';
 import ParagraphText from '../components/typography/ParagraphText';
 
@@ -21,6 +19,7 @@ export const postQuery = graphql`
         alt
         asset {
           gatsbyImageData
+          url
         }
       }
       categories {
@@ -35,17 +34,21 @@ export const postQuery = graphql`
           current
         }
       }
+      _rawExcerpt
+      metaTitle
+      metaDescription
+      canonicalUrl
+      schemaType
+      jsonLd
+      noindex
     }
   }
 `;
 
 function SingleBlog({ data }) {
   const blog = data.sanityBlog;
-
   return (
     <SingleBlogStyles>
-      <SEO title={blog.title} />
-
       <section>
         <div className="h6 breadcrumbs">
           <Link to="/blog">BLOG</Link>
@@ -62,6 +65,7 @@ function SingleBlog({ data }) {
             </ParagraphText>
             <ParagraphText className="categoriesText">
               <BiCategory />
+
               <span className="h5">
                 {blog.categories.map((item, index) => (
                   <span key={item.slug.current}>
@@ -90,3 +94,21 @@ function SingleBlog({ data }) {
 }
 
 export default SingleBlog;
+
+export const Head = ({ data, location }) => {
+  const blog = data.sanityBlog;
+  
+  const firstParagraph = blog?._rawBody[0]?.children[0]?.text;
+  const excerpt = blog?._rawExcerpt[0]?.children[0]?.text;
+
+  const seo = {
+    metaTitle: blog?.metaTitle || blog?.title,
+    metaDescription: blog?.metaDescription || excerpt || firstParagraph,
+    ogImage: blog?.coverImage,
+    canonicalUrl: blog?.canonicalUrl,
+    noindex: blog?.noindex,
+    jsonLd: blog?.jsonLd,
+  }
+
+  return  <SEO seo={seo} pathname={location.pathname} />
+};

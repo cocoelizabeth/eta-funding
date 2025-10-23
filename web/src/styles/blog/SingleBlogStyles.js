@@ -74,7 +74,7 @@ export const SingleBlogStyles = styled.div`
     svg {
       height: 20px;
       width: 20px;
-      display: none;
+      /* display: none; */
     }
     a {
       font-size: var(--font-size-small);

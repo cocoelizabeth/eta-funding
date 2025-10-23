@@ -4,8 +4,8 @@ import { useSiteMetadata } from "../hooks/use-site-metadata";
 export const SEO = ({
   seo = {},
   pathname = "",
-  title,
   //allow ad-hoc overrides if needed
+  title,
   canonicalUrl,
   noindex,
   children,
