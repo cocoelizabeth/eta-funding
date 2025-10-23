@@ -9,5 +9,5 @@ module.exports = {
   projectId: "mg87ynjf",
   dataset: "production",
   watchMode: !isProd,
-  overlayDrafts: !isProd,
+  overlayDrafts: false,
 };
