@@ -68,6 +68,8 @@ export const CategoryPageStyles = styled.div`
       height: 20px;
       width: 20px;
       display: none;
+      min-height: 20px;
+      min-width: 20px;
     }
     a {
       /* font-size: var(--font-size-small);
