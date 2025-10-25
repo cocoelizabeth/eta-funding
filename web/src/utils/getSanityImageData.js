@@ -10,10 +10,10 @@ export function getSanityImageData({ image, ...props }) {
     sourceWidth: image.width,
     sourceHeight: image.height,
     urlBuilder,
-    pluginName: 'gatsby=source-sanity',
-    formats: ['auto'],
+    pluginName: 'gatsby-source-sanity',
+    formats: ['auto', 'webp', 'avif'],
     options: {
-      quality: 80,
+      quality: 100,
     },
     ...props,
   });
